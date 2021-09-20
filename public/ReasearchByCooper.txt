@@ -1,0 +1,41 @@
+0. algorithyms and peusdo code 
+
+mrRobotDrinkOil (loc, dir, true)
+
+move to left of cup
+
+bend arm(R) 90 degrees up
+
+push arm(R) forward till touching glass
+
+bend fingers(all, R) til gripping glass
+
+lift arm(R) to mouth apparatis
+
+pour cup(oil) into mouth apparatis 
+
+release fingers(all)
+
+1.	(javascript)
+input/output:
+https://www.dummies.com/web-design-development/javascript/how-to-manage-text-input-and-output-with-javascript-for-html5-and-css3-programming/
+input output is best described as you type in your name into a box and the code spits out a hard coded line like "hi, *your name*"
+variables:
+https://javascript.info/variables
+varaibles in javascript are just like in math but a bit different. We have let and var as two sytaxes for starting a variable.
+Ex.
+let message = "hello";
+alert(message);
+(you can also use var)
+you can also make it a bit more complicated by doubling up the weird
+let message = "hi";
+var hello = message; //copy of message but w/ different name
+alert(message)
+loops:
+https://www.w3schools.com/js/js_loop_for.asp
+loops are loops they constantly play the same code over and over again
+Ex.
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+} //not mine but it lets you visualise how it is created and how it is utilised, so you wont have to repeat yourself over and over.
+if statements
