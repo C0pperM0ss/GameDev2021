@@ -50,7 +50,9 @@
 </tables>
 
     
-    <input type=button value="go left" onclick="{document.getElementById('cImage').style.left = cTest(); document.getElementById('cDiv01').innerhtml = 'it went left'}">
+    <input type=button value="go left" onclick="
+    {document.getElementById('cImage').style.left = cTest();
+     document.getElementById('cDiv01').innerhtml = 'it went left'}">
     <br>
     <br>
     <div id="cDiv01">...</div>
@@ -66,7 +68,7 @@
     var cVar = "Var";
     document.getElementById('cImage').style.left = cVar;
     
-    cTest()
+    function cTest()
     {
     Var -= 10;
     }
