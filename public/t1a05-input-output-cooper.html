@@ -8,7 +8,7 @@ body {color:goldenrod}
 </style>
 
 <h1 align=center> t1a05-input-output-cooper</h1>
-<h5> version 0.0.3 </h5>
+<h5> version 0.0.4 </h5>
 
 
 
@@ -60,9 +60,12 @@ let cVar02 = parseInt(document.getElementById('cNum02').value)
 let cVar03 = document.getElementById('cTxt02').value
 let cVar04 = document.getElementById('cBtn01').value
 if (cVar02 >= 18){
-	document.getElementById('cTestDiv01').innerHTML = 'Hello ' + cVar01
+	document.getElementById('cTestDiv01').innerHTML = 'Hello ' + cVar01 'thank you for signing up to our news letter, we will be sending it every month to ' + cVar03 ''
 }else{		   
 	document.getElementById('cTestDiv01').innerHTML = 'you do not meet the age requirement'
+}
+if(document.getElementById('cBtn01').clicked == true){
+alert('button has been clicked')
 }
 }">
 <div id="cTestDiv01">...</div>
