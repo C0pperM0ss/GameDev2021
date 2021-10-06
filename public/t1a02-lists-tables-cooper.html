@@ -50,9 +50,9 @@
 </tables>
 
     
-    <input type=button value="go left" onclick="
-    {document.getElementById('cImage').style.left = cTest();
-     document.getElementById('cDiv01').innerhtml = 'it went left';
+    <input type=button value="go left" onclick="{
+    let cImgVar = parseInt(document.getElementById('cImage').style.left)
+    alert(cImgVar)
     }">
     <br>
     <br>
@@ -66,13 +66,6 @@
     
 <script>
 
-    var cVar = "Var";
-    document.getElementById('cImage').style.left = cVar;
-    
-    function cTest()
-    {
-    cVar - 10;
-    }
     
 if (Math.random() < 0.5) 
 {
