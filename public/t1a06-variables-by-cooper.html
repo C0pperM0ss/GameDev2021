@@ -1,5 +1,36 @@
+   
 <h1 align=center><font color=white> t1a06 variables in</font> jscript by cooper</h1>
-<h5 style="color:white;">version 0.0.2</h5>
+<h5 style="color:white;">version 0.0.1</h5>
+
+<script>
+let cTable01 = parseInt(1)
+let cTable02 = parseInt(1)
+
+if (cTable01 == 2) {
+document.getElementById('Div01').innerHTML = "when you hit the forward button it is adding 1 to a variable"
+}
+
+
+
+function cBack01() {
+cTable01 = cTable01 - 1;
+alert(cTable01)
+}
+
+function cForward01() {
+cTable01 = cTable01 + 1;
+alert(cTable01)
+}
+
+function cBack02() {
+cTable02 = cTable02 - 1;
+}
+
+function cForward02() {
+cTable02 = cTable02 + 1;
+}
+
+</script>
 
 
 <style>
@@ -8,17 +39,12 @@
   
 </style>
 
-
-<table id="orange" style="width:50%; border:1px solid #fa7c30; color:white;">
-	<tr><td> when using variables in javascript they are always going to be set as a string type variables, unless you use a parse type, such as Int or float. </td></tr>
-	<tr><td><input type=button id="back" value="back"></td><td><input type=button id="forward" value="forward"></td></tr>
+<table style="width:50%; border:1px solid #fa7c30; color:white; position:absolute; top:110; left:0%;">
+	<tr><td><div id="Div01">divs are a good thing to use as a variables, as it can be changed by anything using an inner html tag</div></td></tr>
+	<tr><td><input type=button id="back" value="back" onclick="{cBack01()}"></td><td><input type=button id="forward" value="forward" onclick="{cForward01()}"></td></tr>
 </table>
 
-
-<table id="white" style="width:50%; border:1px solid white; position:absolute; top:110; left:50%; color:black;">
-	<tr><td><a href="https://www.w3schools.com/js/js_variables.asp" style="color:black;">W3 schools variables page</a>, w3 school pages share alot of good info that you can use</td></tr>
-	<tr><td><input type=button id="back02" value="back" onclick="{ ></td><td><input type=button id="forward02" value="forward" onclick="{ > 
+<table style="width:50%; border:1px solid white; position:absolute; top:110; left:50%; color:black;">
+	<tr><td><div id="Div02">you can alter depending on whether a variable has reached a certain number like i am right now</div></td></tr>
+	<tr><td><input type=button id="back02" value="back" onclick="{cBack02()}"></td><td><input type=button id="forward" value="forward" onclick="{cForward02()}"></td></tr>
 </table>
-
-
-
