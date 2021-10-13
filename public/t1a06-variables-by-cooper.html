@@ -1,33 +1,79 @@
    
 <h1 align=center><font color=white> t1a06 variables in</font> jscript by cooper</h1>
-<h5 style="color:white;">version 0.0.1</h5>
+<h5 style="color:white;">version 1.0.5</h5>
 
 <script>
-let cTable01 = parseInt(1)
-let cTable02 = parseInt(1)
+let cTable01 = 1
+let cTable02 = 1
 
+
+function cText01 () {
+if (cTable01 == 1) {
+document.getElementById('Div01').innerHTML = "divs are a good thing to use as a variables, as it can be changed by anything using an inner html tag"
+}
 if (cTable01 == 2) {
 document.getElementById('Div01').innerHTML = "when you hit the forward button it is adding 1 to a variable"
 }
-
-
+if (cTable01 == 3) {
+document.getElementById('Div01').innerHTML = "and when you hit the back button it is subtracting 1 from a variable"
+}
+if (cTable01 == 4) {
+document.getElementById('Div01').innerHTML = "id say this page is more of an if statment page but the use of variables is advanced so its a variable page"
+}
+}
+function cText02 () {
+if (cTable02 == 1) {
+document.getElementById('Div02').innerHTML = "you can alter depending on whether a variable has reached a certain number like i am right now"
+}
+if (cTable02 == 2) {
+document.getElementById('Div02').innerHTML = "using if statements to check a numbers value must be called on and not just placed in a script tag"
+}
+if (cTable02 == 3) {
+document.getElementById('Div02').innerHTML = "you can also use var in javascript but its not as good as let"
+}
+if (cTable02 == 4) {
+document.getElementById('Div02').innerHTML = "a let tag in javascript is used for saving variables as strings, if you want to change it to a number use parseInt, or parseFloat"
+}
+}
+function cCheck01() {
+if (cTable01 <= 0) {
+cTable01 = 1
+}
+if (cTable01 >=5) {
+cTable01 = 1
+}
+}
+function cCheck02() {
+if (cTable02 <= 0) {
+cTable02 = 1
+}
+if (cTable02 >= 5) {
+cTable02 = 1
+}
+}
 
 function cBack01() {
 cTable01 = cTable01 - 1;
-alert(cTable01)
+cCheck01 ()
+cText01 ()
 }
 
 function cForward01() {
 cTable01 = cTable01 + 1;
-alert(cTable01)
+cCheck01 ()
+cText01 ()
 }
 
 function cBack02() {
 cTable02 = cTable02 - 1;
+cCheck02 ()
+cText02 ()
 }
 
 function cForward02() {
 cTable02 = cTable02 + 1;
+cCheck02 ()
+cText02 ()
 }
 
 </script>
@@ -42,9 +88,11 @@ cTable02 = cTable02 + 1;
 <table style="width:50%; border:1px solid #fa7c30; color:white; position:absolute; top:110; left:0%;">
 	<tr><td><div id="Div01">divs are a good thing to use as a variables, as it can be changed by anything using an inner html tag</div></td></tr>
 	<tr><td><input type=button id="back" value="back" onclick="{cBack01()}"></td><td><input type=button id="forward" value="forward" onclick="{cForward01()}"></td></tr>
+	<tr><td><a style="color:white;" href="https://www.w3schools.com/js/js_if_else.asp">W3 schools if statements page</a></td></tr>
 </table>
 
 <table style="width:50%; border:1px solid white; position:absolute; top:110; left:50%; color:black;">
 	<tr><td><div id="Div02">you can alter depending on whether a variable has reached a certain number like i am right now</div></td></tr>
 	<tr><td><input type=button id="back02" value="back" onclick="{cBack02()}"></td><td><input type=button id="forward" value="forward" onclick="{cForward02()}"></td></tr>
+	<tr><td><a style="color:black;" href="https://www.w3schools.com/js/js_variables.asp"> W3 schools variables page</a></td></tr>
 </table>
