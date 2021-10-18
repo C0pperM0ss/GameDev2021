@@ -1,0 +1,118 @@
+
+Version 0.0.1
+
+<h2 align=center>t1a07-decision-by-Fred.html</h2>
+
+<a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decisions if ... else statments
+Javascript innerHTML value by Fred</a><br>
+Note: ! = Not, && = AND, || = OR
+
+<h4> Example input output code</h4>
+<pre>
+let myHour = 20
+if (myHour < 18) {
+let myGreeting = 'Good day';
+}
+</pre>
+
+<h4> Example working code</h4>
+
+<input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="Simple if Statement for Decision Making" onclick="{
+	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if (myIn01 >= 3){
+		document.getElementById('myDiv01').innerHTML = myIn01 + '  is greater than 3'
+	}
+}">
+
+
+<input type=button value="if...else" onclick="{
+	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if (myIn01 >= 3){
+		document.getElementById('myDiv01').innerHTML = myIn01 + '  is greater than 3'
+	} else {
+		document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+}">
+
+<input type=button value="complex if" onclick="{
+	let myIn01 = parseFloat(document.getElementById('myNum01').value)
+	if ((myIn01 != 3 || myIn01 > -3) && myIn01 <= 100){
+		document.getElementById('myDiv01').innerHTML = myIn01 + '  is complex'
+	} else {
+		document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
+}">
+<div id="myDiv01">...</div>
+<br><br><br>
+<input type=number id="cNum01" value="10"> state your age<br>
+<input type=button value="are you old or not" onclick="{
+	let cAge = parseFloat(document.getElementById('cNum01').value)
+	if (cAge > 16) {
+		document.getElementById('cDiv01').innerHTML = 'wow your old'
+	}
+	if (cAge < 16) {
+	document.getElementById('cDiv01').innerHTML = 'you are young'
+	}
+if (cAge == 16) {
+	document.getElementById('cDiv01').innerHTML = 'perfection'
+	}
+}">
+<div id="cDiv01">...</div>
+<br><br>
+<input type=button id="cBtn01" onclick="{
+	Change01 ()
+	Change ()
+}">
+<input type=button id="cBtn02" onclick="{
+	Change02 ()
+	Change ()
+}">
+
+<script>
+
+
+let cChange01 = 0
+let cChange02 = 0
+
+function Change02 () {
+cChange02 = cChange02 + 1
+if(cChange02 == 0){
+document.getElementById('cBtn02').style.backgroundColor = "white"
+}
+if(cChange02 == 1){
+document.getElementById('cBtn02').style.backgroundColor = "red"
+cChange02 = -1
+}
+}
+function Change01 () {
+cChange01 = cChange01 + 1
+if(cChange01 == 0){
+document.getElementById('cBtn01').style.backgroundColor = "white"
+}
+if(cChange01 == 1){
+document.getElementById('cBtn01').style.backgroundColor = "red"
+cChange01 = -1
+}
+}
+
+function Change () {
+if(cChange01 == 1){
+document.getElementById('cDiv03').innerHTML = 'i created an and or gate out of jscript'
+} else {
+document.getElementById('cDiv03').innerHTML = '...'
+}
+if(cChange02 == 1){
+document.getElementById('cDiv03').innerHTML = 'this is an and or gate hit the other button'
+} else {
+document.getElementById('cDiv03').innerHTML = '...'
+}
+if(cChange01 == 1 && cChange02 == 1) {
+document.getElementById('cDiv03').innerHTML = 'hopefully this work first try'
+}
+}
+</script>
+<div id="cDiv03">...</div>
+
+
+
+</script>
