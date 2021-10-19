@@ -100,17 +100,17 @@ Change ()
 }
 
 function Change () {
-if(cChange01 == 0){
+if(document.getElementById('cBtn01').style.backgroundColor == "red"){
 document.getElementById('cDiv03').innerHTML = 'i created an and or gate out of jscript'
 } else {
 document.getElementById('cDiv03').innerHTML = '...'
 }
-if(cChange02 == 0){
+if(document.getElementById('cBtn02').style.backgroundColor == "red"){
 document.getElementById('cDiv03').innerHTML = 'this is an and or gate hit the other button'
 } else {
 document.getElementById('cDiv03').innerHTML = '...'
 }
-if(cChange01 == 0 && cChange02 == 0) {
+if(document.getElementById('cBtn01').style.backgroundColor == "red" && document.getElementById('cBtn02').style.backgroundColor == "red") {
 document.getElementById('cDiv03').innerHTML = 'hopefully this work first try'
 }
 }
