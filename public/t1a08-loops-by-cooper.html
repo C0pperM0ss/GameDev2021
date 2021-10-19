@@ -1,13 +1,15 @@
 Version 0.0.2
 <h2 align=center>t1a08-loops-by-cooper.html</h2>
 
+<style>
+  
+  body {background-color:navajowhite}
+  
+</style>
+
+
 <a href="https://www.w3schools.com/js/js_loop_for.asp">Good reference to Javascript Loops</a><br>
 
-
-<h4> Example input output code</h4>
-<pre>
-
-</pre>
 
 <h4> Example working code</h4>
 
@@ -28,6 +30,19 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 document.getElementById('myDiv01').innerHTML = myTemp
 }">
 
-
+<input type=button value="+1 to your number" onclick="{
+  document.getElementById('cDiv02').innerHTML = ''
+  let cTemp = ''
+                                                                  
+  let cMax = parseInt(document.getElementById('myNum01').value)
+                                                                  
+  for (let cLoop = 0; cLoop < cMax; cLoop++ ){
+    if (cLoop * 2 > cMax){
+      document.getElementById('myDiv02').innerHTML += 'cool'
+     }
+    cTemp += 'Loop number: '+ cLoop + '<br>'
+}
+document.getElementById('myDiv02').innerHTML = cTemp
+}">
 
 <div id="myDiv01">...</div>
