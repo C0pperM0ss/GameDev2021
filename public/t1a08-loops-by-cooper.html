@@ -30,11 +30,12 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 document.getElementById('myDiv01').innerHTML = myTemp
 }">
 <div id="myDiv01">...</div>
+<input id="cNum01" type=number value="4" ><br>
 <input type=button value="+1 to your number" onclick="{
   document.getElementById('cDiv01).innerHTML = ''
   let cTemp = ''
                                                                   
-  let cMax = parseInt(document.getElementById('myNum01').value)
+  let cMax = parseInt(document.getElementById('cNum01').value)
                                                                   
   for (let cLoop = 0; cLoop < cMax; cLoop++ ){
     if (cLoop * 2 > cMax){
