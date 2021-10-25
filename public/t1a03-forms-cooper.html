@@ -7,8 +7,21 @@
         
 </style>
 
+<script>
 
-
+function cCheckbox01 () {
+if(document.getElementById('Check01').checked)
+{
+document.getElementById('cDiv01').innerHTML = 'you chose beef'        
+}
+}
+function cCheckbox02 () {
+if(document.getElementById('Check02').checked)
+{
+document.getElementById('cDiv01').innerHTML = 'you chose chicken'        
+}
+}        
+</script>
 <font color=blue> prove you can use: forms</font>
 
 the following are all form elements (add to them):<br>
@@ -16,8 +29,10 @@ the following are all form elements (add to them):<br>
   
   enter you first name:<input type=text id="Ctext1" value = "cooper"><br>
   checkbox:<br>
-  beef:<input type=checkbox><BR>
-  chicken: <input type=checkbox><br>
+  beef:<input id="Check01" type=checkbox onclick="{cCheckbox02 ()}"><BR>
+  chicken: <input id="Check02" type=checkbox onclick="{cCheckbox01 ()}"><br>
+  you can also check if check boxes are checked using jscript<br>
+        <div id="cDiv01">...</div><br>
   radio buttons:<br>
   titanfall 2 <input type=radio name="cRAD1" value=""><BR>
   apex legends <input type=radio name="cRAD1" vaalue=""><BR>
