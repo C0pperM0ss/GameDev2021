@@ -2,18 +2,17 @@ version 0.0.1
 
 <h3> t1a09 funtcions by cooper</h3>
 
-example code
-<pre> 
+example code 
 
-script
+<script>
 function myExampleFunction() {
 let myIn01 = parseInt(document.getElementById('myText01').value)
 let mySum = myIn01 + myIn01
 let myReply = myIn01 +'+' + myIn01 + + mySum
-return my Reply
+return myReply
+document.getElementById('mydiv01').innerHTML = myReply
 }
-/script
-<pre>
+</script>
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
 
 Functions are used to sensibly organzie code. Then they are "Called" elsewhere.
@@ -26,7 +25,5 @@ return parseInt(document.getElementById('myText01').value)
 </pre>
 <h4> Example working code</h4>
 <input type=text id="myText01" value="3"><br>
-<input type=button value="Function Example" onClick="{
-document.getElementById('myDiv01').innerHTML myExampleFunction()
-=
+<input type=button value="Function Example" onClick="{ myExampleFunction()}">
 <div id="myDiv01">...</div>
