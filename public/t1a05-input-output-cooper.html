@@ -16,7 +16,7 @@ body {background-color:goldenrod}
 <div id="myDiv01">this is a div tag, changeable by many different things -></div>
 
 <input type=button value=" 1 " onclick="{document.getElementById('myDiv01').innerHTML = 'such as using a button and a inner html tag to change the text to something else'}"> 
-<input type=button value=" 2 " onclick="{document.getElementById('myDiv01').innerHTML = 'w3 schools has a good library of things, like inner html i dont have internet rn so look that up yo self'}">
+<input type=button value=" 2 " onclick="{document.getElementById('myDiv01').innerHTML = 'w3 schools has a good library of things, like inner html'}">
 <br>
 <input id="cNum01" type=number value="4" ><br>
 
@@ -25,7 +25,16 @@ body {background-color:goldenrod}
 	let result = cIn01 * cIn01
 	document.getElementById('cDiv01').innerHTML = 'your result is :'+result
 }"><br>
-
+<input  type=button value="cube your number" onclick="{
+	let cIn01 = document.getElementById('cNum01').value
+	let result = cIn01 * cIn01 * cIn01
+	document.getElementById('cDiv01').innerHTML = 'your result is :'+result
+}"><br>
+<input  type=button value="square root" onclick="{
+	let cIn01 = document.getElementById('cNum01').value
+	let result = cIn01 / cIn01
+	document.getElementById('cDiv01').innerHTML = 'your result is :'+result
+}"><br>
 <div id="cDiv01">...</div><br>
 this is a test for text box<br>
 <input type=text id="cText01" value="your name here"><br>
