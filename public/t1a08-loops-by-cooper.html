@@ -50,19 +50,19 @@ document.getElementById('cDiv01').innerHTML = cTemp
 <div id="cDiv01">...</div>
 <input id="cNum01" type=number value="4" >how many times it loops<br>
 <input type=button value="Coopers loops" onclick="{
-  document.getElementById('cDiv01').innerHTML = ''
+  document.getElementById('cDiv02').innerHTML = ''
   let cTemp = ''
                                                                   
   let cMax = parseInt(document.getElementById('cNum01').value)
                                                                   
   for (let cLoop = 0; cLoop < cMax; cLoop++ ){
     if (cLoop * 2 > cMax){
-      document.getElementById('cDiv01').innerHTML += 'cool'
+      document.getElementById('cDiv02').innerHTML += 'cool'
      }
    let cLoop2 = cLoop + 1
     cTemp += 'Loop number: '+ cLoop2 + '<br>'
 }
-document.getElementById('cDiv01').innerHTML = cTemp
+document.getElementById('cDiv02').innerHTML = cTemp
 }">
-<div id="cDiv01">...</div>
+<div id="cDiv02">...</div>
 
