@@ -48,12 +48,12 @@ document.getElementById('myDiv01').innerHTML = myTemp
 document.getElementById('cDiv01').innerHTML = cTemp
 }">
 <div id="cDiv01">...</div>
-<input id="cNum01" type=number value="4" >how many times it loops<br>
+<input id="cNum02" type=number value="4" >how many times it loops<br>
 <input type=button value="Coopers loops" onclick="{
   document.getElementById('cDiv02').innerHTML = ''
   let cTemp = ''
                                                                   
-  let cMax = parseInt(document.getElementById('cNum01').value)
+  let cMax = parseInt(document.getElementById('cNum02').value)
                                                                   
   for (let cLoop = 0; cLoop < cMax; cLoop++ ){
     if (cLoop * 2 > cMax){
@@ -65,9 +65,23 @@ document.getElementById('cDiv01').innerHTML = cTemp
 document.getElementById('cDiv02').innerHTML = cTemp
 }">
 <div id="cDiv02">...</div>
-<input value="example from w3 schools" type=button onclick="
-}for (let i = 0, len = cars.length, text = ''; i < len; i++) {
-  text += cars[i] + '<br>';
+<input id="cNum03" type=number value="4" >how many times it loops<br>
+<input type=button value="Coopers loops" onclick="{
+  document.getElementById('cDiv03').innerHTML = ''
+  let cTemp = ''
+                                                                  
+  let cMax = parseInt(document.getElementById('cNum03').value)
+                                                                  
+  for (let cLoop = 0; cLoop < cMax; cLoop++ ){
+    if (cLoop * 2 > cMax){
+      document.getElementById('cDiv03').innerHTML += 'cool'
+     }
+   let cLoop2 = cLoop + 1
+    cTemp += 'Loop number: '+ cLoop2 + '<br>'
 }
+document.getElementById('cDiv03').innerHTML = cTemp
 }">
+<div id="cDiv03">...</div>
+
+
 
