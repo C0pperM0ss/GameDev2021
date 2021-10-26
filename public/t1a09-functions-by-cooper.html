@@ -11,6 +11,14 @@ let mySum = myIn01 + myIn01
 let myReply = myIn01 + '+' + myIn01 + '=' + mySum
 document.getElementById('myDiv01').innerHTML = myReply
 }
+let cFnum = parceInt(document.getElementById('fNum').value)
+let cSnum = parceInt(document.getElementById('sNum').value)
+
+function Add () {
+  let Result01 = cFnum + cSnum
+  document.getELementById('cDiv01').innerHTML = Result01
+}
+  
 </script>
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
 
@@ -26,3 +34,9 @@ return parseInt(document.getElementById('myText01').value)
 <input type=text id="myText01" value="3"><br>
 <input type=button value="Function Example" onClick="{ myExampleFunction()}">
 <div id="myDiv01">...</div>
+<br><br>
+<input type=number id="fNum" value="2">first number<br>
+<input type=number id="sNum" value="2">second number<br>
+<input type=button value="add" onclick="{Add()}"><input type=button value="Subtract" onclick="{Sub()}"><input type=button value="Multiply" onclick="{Multi()}"><input type=button value="Divide" onclick="{Div()}">
+<br>
+<div id="cDiv01">Output area</div>
