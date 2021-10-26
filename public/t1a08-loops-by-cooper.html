@@ -66,7 +66,8 @@ document.getElementById('cDiv02').innerHTML = cTemp
 }">
 <div id="cDiv02">...</div>
 <input id="cNum03" type=number value="4" >how many times it loops<br>
-<input type=button value="Coopers loops" onclick="{
+<input id="cCNum03" type=number value="4" >addition<br>
+<input type=button value="adding loops?" onclick="{
   document.getElementById('cDiv03').innerHTML = ''
   let cTemp = ''
                                                                   
@@ -76,8 +77,9 @@ document.getElementById('cDiv02').innerHTML = cTemp
     if (cLoop * 2 > cMax){
       document.getElementById('cDiv03').innerHTML += 'cool'
      }
-   let cLoop2 = cLoop + 1
-    cTemp += 'Loop number: '+ cLoop2 + '<br>'
+   let cNum = document.getElementById('cCnum03').value + cLoop
+      
+    cTemp += 'number:' + cNum
 }
 document.getElementById('cDiv03').innerHTML = cTemp
 }">
