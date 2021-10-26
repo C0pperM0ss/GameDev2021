@@ -30,9 +30,9 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 document.getElementById('myDiv01').innerHTML = myTemp
 }">
 <div id="myDiv01">...</div>
-<input id="cNum02" type=number value="4" >number to add to<br>
+
 <input id="cNum01" type=number value="4" >how many times it loops<br>
-<input type=button value="+1 to your number" onclick="{
+<input type=button value="*fixed* stated number of loops" onclick="{
   document.getElementById('cDiv01').innerHTML = ''
   let cTemp = ''
                                                                   
@@ -42,8 +42,8 @@ document.getElementById('myDiv01').innerHTML = myTemp
     if (cLoop * 2 > cMax){
       document.getElementById('cDiv01').innerHTML += 'cool'
      }
-    let cNum = parceInt(document.getElementById('cNum02').value) + 1
-    cTemp += 'Loop number: '+ cNum + '<br>'
+    cLoop = cLoop + 1
+    cTemp += 'Loop number: '+ cLoop + '<br>'
 }
 document.getElementById('cDiv01').innerHTML = cTemp
 }">
