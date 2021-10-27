@@ -14,12 +14,24 @@ document.getElementById('myDiv01').innerHTML = myReply
 let cFnum = parceInt(document.getElementById('fNum').value)
 let cSnum = parceInt(document.getElementById('sNum').value)
 
-function Add () {
+function Add() {
   let Result01 = cFnum + cSnum
-  document.getELementById('cDiv01').innerHTML = Result01
+  document.getElementById('cDiv01').innerHTML = Result01
+}
+function Sub() {
+  let Result02 = cFnum - cSnum
+  document.getElementById('cDiv01').innerHTML = Result01
+}
+  function Multi() {
+  let Result03 = cFnum * cSnum
+  document.getElementById('cDiv01').innerHTML = Result01
+}
+function Div() {
+  let Result04 = cFnum / cSnum
+  document.getElementById('cDiv01').innerHTML = Result01
 }
   
-</script>
+  </script>
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
 
 Functions are used to sensibly organzie code. Then they are "Called" elsewhere.
