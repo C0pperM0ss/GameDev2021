@@ -85,5 +85,29 @@ document.getElementById('cDiv03').innerHTML = cTemp
 }">
 <div id="cDiv03">...</div>
 
+<br>
+advanced addition loops
+<input id="cNum04" type=number value="4" >how many times it loops<br>
+<input id="cCNum04" type=number value="4" >addition<br>
+<input id="cCNum05" type=number value="4" >secondary addition<br>
+<input type=button value="adding loops?" onclick="{
+  document.getElementById('cDiv04').innerHTML = ''
+  let cTemp = ''
+                                                                  
+  let cMax = parseInt(document.getElementById('cNum04').value)
+  let cExp = parseInt(document.getElementById('cCNum04').value)
+  let cExp02 = parseInt(document.getElementById('cCNum05').value)
+                                                  
+  for (let cLoop = 0; cLoop < cMax; cLoop++ ){
+    if (cLoop * 2 > cMax){
+      document.getElementById('cDiv04').innerHTML += 'cool'
+     }
+   let cNum2 = cLoop + 1 * cExp + cExp02
+      
+    cTemp += 'number:' + cNum2 + '<br>'
+}
+document.getElementById('cDiv04').innerHTML = cTemp
+}">
+<div id="cDiv04">...</div>
 
 
