@@ -5,7 +5,7 @@ version 0.0.3
 example code 
 
 <script>
-  let cFnum = parseInt(document.getElementById('fNum').value)
+let cFnum = parseInt(document.getElementById('fNum').value)
 let cSnum = parseInt(document.getElementById('sNum').value)
   
   
@@ -16,9 +16,6 @@ let mySum = myIn01 + myIn01
 let myReply = myIn01 + '+' + myIn01 + '=' + mySum
 document.getElementById('myDiv01').innerHTML = myReply
 }
-let cFnum = parseInt(document.getElementById('fNum').value)
-let cSnum = parseInt(document.getElementById('sNum').value)
-
 function Add() {
   let Result01 = cFnum + cSnum
   document.getElementById('cDiv01').innerHTML = Result01
@@ -27,7 +24,7 @@ function Sub() {
   let Result02 = cFnum - cSnum
   document.getElementById('cDiv01').innerHTML = Result01
 }
-  function Multi() {
+function Multi() {
   let Result03 = cFnum * cSnum
   document.getElementById('cDiv01').innerHTML = Result01
 }
