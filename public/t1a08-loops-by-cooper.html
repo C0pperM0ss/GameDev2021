@@ -113,24 +113,33 @@ addition<input name="radio01" id="Rad01" type=radio><br>
 Subtraction<input name="radio01" id="Rad02" type=radio><br>
 Multiplication<input name="radio01" id="Rad03" type=radio><br>
 Division<input name="radio01" id="Rad04" type=radio><br>
-<input id="cNum04" type=number value="4" >how many times it loops<br>
-<input id="cCNum04" type=number value="4" >addition<br>
-<input id="cCNum05" type=number value="4" >secondary addition<br>
-<input type=button value="adding loops?" onclick="{
-  document.getElementById('cDiv04').innerHTML = ''
+<input id="cNum010" type=number value="4" >how many times it loops<br>
+<input id="cCNum08" type=number value="4" >First Math<br>
+<input id="cCNum09" type=number value="4" >Secondary Math<br>
+<input type=button value="Math Loops!" onclick="{
+  document.getElementById('cDiv06').innerHTML = ''
   let cTemp = ''
                                                                   
-  let cMax = parseInt(document.getElementById('cNum04').value)
-  let cExp = parseInt(document.getElementById('cCNum04').value)
-  let cExp02 = parseInt(document.getElementById('cCNum05').value)
+  let cMax = parseInt(document.getElementById('cNum010').value)
+  let cExp = parseInt(document.getElementById('cCNum08').value)
+  let cExp02 = parseInt(document.getElementById('cCNum09').value)
                                                   
   for (let cLoop = 0; cLoop < cMax; cLoop++ ){
-   let cNum2 = cExp + cExp02 * cLoop
+  if(document.getElementById('Rad01').checked == true){
+     let cNum2 = cExp + cExp02 * cLoop                              
+  } else  if(document.getElementById('Rad02').checked == true){
+     let cNum2 = cExp - cExp02 * cLoop                              
+  } else  if(document.getElementById('Rad03').checked == true){
+     let cNum2 = cLoop * cExp02 * cExp                              
+  } else  if(document.getElementById('Rad04').checked == true){
+     let cNum2 = cLoop * cExp02 / cExp                            
+  }
+  
       
     cTemp += 'number:' + cNum2 + '<br>'
 }
-document.getElementById('cDiv04').innerHTML = cTemp
+document.getElementById('cDiv06').innerHTML = cTemp
 }">
-<div id="cDiv04">...</div>
+<div id="cDiv06">...</div>
 
 
