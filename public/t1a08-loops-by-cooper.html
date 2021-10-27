@@ -77,7 +77,7 @@ document.getElementById('cDiv02').innerHTML = cTemp
     if (cLoop * 2 > cMax){
       document.getElementById('cDiv03').innerHTML += 'cool'
      }
-   let cNum = document.getElementById('cCNum03').value + cLoop
+   let cNum = parceInt(document.getElementById('cCNum03').value) + cLoop
       
     cTemp += 'number:' + cNum + '<br>'
 }
