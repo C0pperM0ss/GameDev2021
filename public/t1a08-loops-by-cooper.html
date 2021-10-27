@@ -130,9 +130,9 @@ Division<input name="radio01" id="Rad04" type=radio><br>
   } else if (document.getElementById('Rad02').checked == true){
     cNum2 = cExp - cExp02 * cLoop                              
   } else if (document.getElementById('Rad03').checked == true){
-    cNum2 = cLoop * cExp02 * cExp                              
+    cNum2 = (cLoop + 1) * cExp02 * cExp                          
   } else if (document.getElementById('Rad04').checked == true){
-    cNum2 = cLoop * cExp02 / cExp                            
+    cNum2 = (cLoop + 1) * cExp02 / cExp                            
   }
   
       
