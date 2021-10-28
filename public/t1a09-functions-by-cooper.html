@@ -1,4 +1,4 @@
-version 0.0.3
+version 0.0.4
 
 <h3> t1a09 funtcions by cooper</h3>
 
@@ -20,9 +20,7 @@ let mySum = myIn01 + myIn01
 let myReply = myIn01 + '+' + myIn01 + '=' + mySum
 document.getElementById('myDiv01').innerHTML = myReply
 }
-function Add() {
-  let cFnum = parseInt(document.getElementById('fNum').value)
-let cSnum = parseInt(document.getElementById('sNum').value)
+function Add(cFnum, cSnum) {
   let Result01 = cFnum + cSnum
   document.getElementById('cDiv01').innerHTML = Result01
 }
