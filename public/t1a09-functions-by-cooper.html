@@ -50,6 +50,34 @@ let cSnum = parseInt(document.getElementById('sNum').value)
   let Result04 = cFnum / cSnum
   document.getElementById('cDiv01').innerHTML = Result04
 }
+function Btn1() {
+let cBtn1 = 0
+
+if (cBtn1 == 0) {
+document.getElementById('cBtn1').style.backgroundColor = green
+document.getElementById('cBtn1').value = 'On'
+cBtn1 = cBtn1 + 1
+}
+  
+if (cBtn1 == 1) {
+document.getElementById('cBtn1').style.backgroundColor = red
+document.getElementById('cBtn1').value = 'Off'
+cBtn1 = cBtn1 - 1
+}
+  
+}
+
+function Btn2 {
+
+}
+    
+function AND() {
+  
+}
+function OR() {
+  
+}
+  
   
   </script>
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
@@ -72,3 +100,13 @@ return parseInt(document.getElementById('myText01').value)
 <input type=button value="add" onclick="{Add()}"><input type=button value="Subtract" onclick="{Sub()}"><input type=button value="Multiply" onclick="{Multi()}"><input type=button value="Divide" onclick="{Div()}">
 <br>
 <div id="cDiv01">Output area</div>
+<br><br><br>
+<input value="Off" id="cBtn1" type=button onclick="{
+document.getElementById('cBtn1').style.backgroundColor = red
+Btn1 ()
+AND ()     
+}">
+<input value="Off" id="cBtn2" type=button onclick="{
+Btn2 ()
+AND ()     
+}">
