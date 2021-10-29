@@ -44,9 +44,11 @@ function Btn1 () {
 Btn01 = Btn01 + 1
 if(Btn01 == 0){
 document.getElementById('cBtn1').style.backgroundColor = "green"
+document.getElementById('cBtn1').value = "ON"
 }
 if(Btn01 == 1){
 document.getElementById('cBtn1').style.backgroundColor = "red"
+document.getElementById('cBtn1').value = "OFF"
 Btn01 = -1
 }
 }
@@ -54,9 +56,11 @@ function Btn2 () {
 Btn02 = Btn02 + 1
 if(Btn02 == 0){
 document.getElementById('cBtn2').style.backgroundColor = "green"
+document.getElementById('cBtn2').value = "ON"
 }
 if(Btn02 == 1){
 document.getElementById('cBtn2').style.backgroundColor = "red"
+document.getElementById('cBtn2').value = "OFF"
 Btn02 = -1
 }
 }
@@ -74,9 +78,9 @@ Information can also be passed to functions (that's more advanced).
 <br>
 <div id="cDiv01">Output area</div>
 <br><br><br>
-<input value="Off" id="cBtn1" type=button onclick="{
+<input value="ON" style="background-color:green;" id="cBtn1" type=button onclick="{
 Btn1()   
 }">
-<input value="Off" id="cBtn2" type=button onclick="{
+<input value="ON" style="background-color:green;" id="cBtn2" type=button onclick="{
 Btn2()
 }">
