@@ -7,7 +7,6 @@ example code
 
 
 <script>
-  
 function Add() {
   let cFnum = parseInt(document.getElementById('fNum').value)
   let cSnum = parseInt(document.getElementById('sNum').value)
@@ -35,20 +34,21 @@ let cSnum = parseInt(document.getElementById('sNum').value)
 let Result04 = cFnum / cSnum
 document.getElementById('cDiv01').innerHTML = Result04
 }
-
+</script>
+<script>
   
+let Btn01 = 1
+    
 function Btn1 () {
-let BtnN1 = 1
-BtnN1 = BtnN1 + 1
-if(BtnN1 == 0){
+Btn01 = Btn01 + 1
+if(Btn01 == 0){
 document.getElementById('cBtn1').style.backgroundColor = "green"
 }
-if(BtnN1 == 1){
+if(Btn01 == 1){
 document.getElementById('cBtn1').style.backgroundColor = "red"
-BtnN1 = -1
+Btn01 = -1
 }
 }
-  
 </script>
 
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
