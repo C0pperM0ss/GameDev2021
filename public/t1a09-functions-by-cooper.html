@@ -49,12 +49,14 @@ if(Btn01 == 0){
 document.getElementById('cBtn1').style.backgroundColor = "green"
 document.getElementById('cBtn1').value = "ON"
 Change()
+Change02()
 }
 if(Btn01 == 1){
 document.getElementById('cBtn1').style.backgroundColor = "red"
 document.getElementById('cBtn1').value = "OFF"
 Btn01 = -1
 Change()
+Change02()
 }
 }
 function Btn2 () {
@@ -63,12 +65,14 @@ if(Btn02 == 0){
 document.getElementById('cBtn2').style.backgroundColor = "green"
 document.getElementById('cBtn2').value = "ON"
 Change()
+Change02()
 }
 if(Btn02 == 1){
 document.getElementById('cBtn2').style.backgroundColor = "red"
 document.getElementById('cBtn2').value = "OFF"
 Btn02 = -1
 Change()
+Change02()
 }
 }
 function Change() {
@@ -80,6 +84,11 @@ document.body.style.backgroundColor = "peru"
 }
 if (document.getElementById('cBtn1').style.backgroundColor == "green" && document.getElementById('cBtn2').style.backgroundColor == "red"){
 document.body.style.backgroundColor = "pink"
+}
+}
+function Change02() {
+if (document.getElementById('cBtn1').style.backgroundColor == "red" && document.getElementById('cBtn2').style.backgroundColor == "red"){
+document.body.style.backgroundColor = "peachpuff"
 }
 }
 </script>
