@@ -38,7 +38,8 @@ document.getElementById('cDiv01').innerHTML = Result04
 <script>
   
 let Btn01 = 1
-    
+let Btn02 = 1    
+
 function Btn1 () {
 Btn01 = Btn01 + 1
 if(Btn01 == 0){
@@ -47,6 +48,16 @@ document.getElementById('cBtn1').style.backgroundColor = "green"
 if(Btn01 == 1){
 document.getElementById('cBtn1').style.backgroundColor = "red"
 Btn01 = -1
+}
+}
+function Btn2 () {
+Btn02 = Btn02 + 1
+if(Btn02 == 0){
+document.getElementById('cBtn2').style.backgroundColor = "green"
+}
+if(Btn02 == 1){
+document.getElementById('cBtn2').style.backgroundColor = "red"
+Btn02 = -1
 }
 }
 </script>
@@ -63,8 +74,9 @@ Information can also be passed to functions (that's more advanced).
 <br>
 <div id="cDiv01">Output area</div>
 <br><br><br>
-<input value="Off" style="background-color:red;" id="cBtn1" type=button onclick="{
+<input value="Off" id="cBtn1" type=button onclick="{
 Btn1()   
 }">
-<input value="Off" id="cBtn2" type=button onclick="{ 
+<input value="Off" id="cBtn2" type=button onclick="{
+Btn2()
 }">
