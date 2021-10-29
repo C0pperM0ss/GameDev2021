@@ -4,7 +4,10 @@ version 0.0.5
 
 example code 
 
-
+<style>
+  
+  body {background-color:peachpuff;}
+</style>
 
 <script>
 function Add() {
@@ -45,11 +48,13 @@ Btn01 = Btn01 + 1
 if(Btn01 == 0){
 document.getElementById('cBtn1').style.backgroundColor = "green"
 document.getElementById('cBtn1').value = "ON"
+Change()
 }
 if(Btn01 == 1){
 document.getElementById('cBtn1').style.backgroundColor = "red"
 document.getElementById('cBtn1').value = "OFF"
 Btn01 = -1
+Change()
 }
 }
 function Btn2 () {
@@ -57,11 +62,24 @@ Btn02 = Btn02 + 1
 if(Btn02 == 0){
 document.getElementById('cBtn2').style.backgroundColor = "green"
 document.getElementById('cBtn2').value = "ON"
+Change()
 }
 if(Btn02 == 1){
 document.getElementById('cBtn2').style.backgroundColor = "red"
 document.getElementById('cBtn2').value = "OFF"
 Btn02 = -1
+Change()
+}
+}
+function Change() {
+if (document.getElementById('cBtn2').style.backgroundColor == "green" && document.getElementById('cBtn1').style.backgroundColor == "green"){
+document.body.style.backgroundColor = "salmon"
+}
+if (document.getElementById('cBtn2').style.backgroundColor == "green" && document.getElementById('cBtn1').style.backgroundColor == "red"){
+document.body.style.backgroundColor = "peru"
+}
+if (document.getElementById('cBtn1').style.backgroundColor == "green" && document.getElementById('cBtn2').style.backgroundColor == "red"){
+document.body.style.backgroundColor = "pink"
 }
 }
 </script>
