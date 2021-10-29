@@ -38,6 +38,20 @@ let cSnum = parseInt(document.getElementById('sNum').value)
 let Result04 = cFnum / cSnum
 document.getElementById('cDiv01').innerHTML = Result04
 }
+
+  let BtnN1 = 1
+  
+function Btn1 () {
+BtnN1 = BtnN1 + 1
+if(BtnN1 == 0){
+document.getElementById('Btn1').style.backgroundColor = "green"
+}
+if(BtnN1 == 1){
+document.getElementById('Btn1').style.backgroundColor = "red"
+BtnN1 = -1
+}
+}
+  
 </script>
 
 <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
@@ -53,7 +67,6 @@ Information can also be passed to functions (that's more advanced).
 <div id="cDiv01">Output area</div>
 <br><br><br>
 <input value="Off" style="background-color:red;" id="cBtn1" type=button onclick="{
-document.getElementById('cBtn1').style.backgroundColor = 'green'
 Btn1()
 AND()     
 }">
