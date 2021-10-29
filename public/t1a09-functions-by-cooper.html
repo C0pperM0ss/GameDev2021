@@ -41,10 +41,10 @@ function Btn1 () {
 let BtnN1 = 1
 BtnN1 = BtnN1 + 1
 if(BtnN1 == 0){
-document.getElementById('Btn1').style.backgroundColor = "green"
+document.getElementById('cBtn1').style.backgroundColor = "green"
 }
 if(BtnN1 == 1){
-document.getElementById('Btn1').style.backgroundColor = "red"
+document.getElementById('cBtn1').style.backgroundColor = "red"
 BtnN1 = -1
 }
 }
@@ -64,11 +64,7 @@ Information can also be passed to functions (that's more advanced).
 <div id="cDiv01">Output area</div>
 <br><br><br>
 <input value="Off" style="background-color:red;" id="cBtn1" type=button onclick="{
-let BtnN1 = 1
-Btn1()
-AND()     
+Btn1()   
 }">
-<input value="Off" id="cBtn2" type=button onclick="{
-Btn2()
-AND()     
+<input value="Off" id="cBtn2" type=button onclick="{ 
 }">
