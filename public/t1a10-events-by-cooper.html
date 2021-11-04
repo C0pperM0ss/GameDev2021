@@ -1,9 +1,10 @@
 <script>
 
 function First01() {
-document.getElementById('cDiv02').innerHTML = '<b id="cB01" onmouseover="{
-
-}"> try hovering over this and see if it fixes the page</b>  
+document.getElementById('cDiv02').innerHTML = '<b style="color:white;" id="cB01" onmouseover="{
+document.body.style.backgroundColor = "red"
+document.getElementById("cDiv01").innerHTML = "this should not have happened"
+}"> try hovering over this and see if it fixes the page</b>' 
 }
   
 </script>
