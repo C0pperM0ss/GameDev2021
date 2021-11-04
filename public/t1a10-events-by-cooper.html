@@ -17,6 +17,8 @@ alert('hi')
 }" &
 </pre>
 
+<div id="cDiv03"></div>
+
 <h4> Example working code</h4>
 
 <input type=text id="myText01" value="3"><br>
@@ -38,6 +40,8 @@ onkey Down, onkeyPress, onDragStart, on TouchStart, on TouchEnd, on TouchMove
 <br><input type=button value="click me" id="cClick" onclick="{
 document.body.style.backgroundColor = 'black'
 cFirst01()
+}" ondblclick="{
+cSecond02()
 }">
   <div style="color:white;" id="cDiv01">...</div>
 <script>
@@ -45,7 +49,14 @@ cFirst01()
 function cFirst01() {
 document.getElementById('cDiv02').innerHTML = '<b style="color:white;" id="cB02">this should be working</b>' 
 }
+function cSecond02() {
+document.getElementById('cDiv03').innerHTML = 'do you want this to be fixed?<br><input type=radio name="yes" value="yes" onchange="{document.getElementById("cDiv03").style.color = "green"}"><input type=radio name="yes" value="no" onchange="{document.getElementById("cDiv03").style.color = "red"}">  
+}
+</script>
+
+
   
+}
 </script>
 
 
