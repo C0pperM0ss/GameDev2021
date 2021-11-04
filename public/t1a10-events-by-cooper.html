@@ -17,7 +17,9 @@ alert('hi')
 }" &
 </pre>
 
-<div id="cDiv03"></div>
+<div id="cDiv03" onchange="{
+document.body.style.backgroundColor = 'green'
+}"></div>
 
 <h4> Example working code</h4>
 
@@ -51,7 +53,7 @@ document.getElementById('cDiv02').innerHTML = '<b style="color:white;" id="cB02"
 </script>
 <script>
 function cSecond02() {
-document.getElementById('cDiv03').innerHTML = 'do you want this to be fixed?<br><input type=radio name="yes" value="yes" onchange="{document.getElementById("cDiv03").style.color = "green"}"><input type=radio name="yes" value="no" onchange="{document.getElementById("cDiv03").style.color = "red"}">  
+document.getElementById('cDiv03').innerHTML = "man i dont know whats happening at this point"
 }
 </script>
 
