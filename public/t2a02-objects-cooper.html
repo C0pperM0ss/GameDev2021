@@ -21,13 +21,13 @@ let my person {
 Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
 <input type=button value="Example Object Set and Show" onclick="{
-let my person {
+let myPerson {
 'firstName' : 'John',
 'lastName': 'Doe',
 'age' : 50,
-'eyeColor : 'blue'
+'eyeColor' : 'blue'
 }
-document.getElementById('myDiv01').innerHTML '<br>myPerson object has properties: <br>'
+document.getElementById('myDiv01').innerHTML = '<br>myPerson object has properties: <br>'
 document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>
 document.getElementById('myDiv01').innerHTML += 'You do the others' <br>
 }">
