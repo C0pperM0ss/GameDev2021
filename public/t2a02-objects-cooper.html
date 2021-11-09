@@ -37,17 +37,16 @@ document.getElementById('myDiv01').innerHTML += 'You do the others <br>'
 
 <input type=button value="click this and see what happens" onclick="{
   let cPerson = {
-'first' : 'John',
+'first' : 'jane',
 'last': 'Doe',
-'age' : 50,
-'eyeColor' : 'blue'
+'age' : 45,
+'eyeColor' : 'brown'
 }
-document.getElementById('cDiv01').innerHTML = '<br>cPerson object has properties: <br>'
+document.getElementById('cDiv01').innerHTML = '<br> this person is: <br>'
 document.getElementById('cDiv01').innerHTML += 'first Name: ' + cPerson.first + '<br>'
-document.getElementById('cDiv01').innerHTML += 'Last Name: ' + cPerson.Last + '<br>'
+document.getElementById('cDiv01').innerHTML += 'Last Name: ' + cPerson.last + '<br>'
 document.getElementById('cDiv01').innerHTML += 'age: ' + cPerson.age + '<br>'
-document.getElementById('cDiv01').innerHTML += 'eye color: ' + cPerson.eyecolor + '<br>'
-document.getElementById('cDiv01').innerHTML += 'You do the others <br>'
+document.getElementById('cDiv01').innerHTML += 'eye color: ' + cPerson.eyeColor + '<br>'
 }">
 
 <div id="cDiv01">...</div>
