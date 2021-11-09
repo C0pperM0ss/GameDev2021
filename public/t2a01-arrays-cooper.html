@@ -63,4 +63,21 @@ cSum += 'array number:' + cLoop + ' array entry:' + cArray[cLoop] + '<br>'
 }
 document.getElementById('cDiv01').innerHTML = cSum
 }">
-<div id="cDiv01">...</div>
+<div id="cDiv01">...</div><br>
+<input type=textarea id="cTxt05" value="1.write your name here"><br>
+<input type=textarea id="cTxt06" value="2.write your age here"><br>
+<input type=textarea id="cTxt07" value="3.write your eye color here"><br>
+<input type=textarea id="cTxt08" value="4.write your fav food here"><br>
+<input type=number id="cNum02" value=3> which data would you like to print?<br>
+<input type=button value="submit data" onclick="{
+let cNum = document.getElementById('cNum02').value
+let cSum = cNum - 1             
+cArray = new Array()
+cArray[0] = document.getElementById('cTxt05').value
+cArray[1] = document.getElementById('cTxt06').value
+cArray[2] = document.getElementById('cTxt07').value
+cArray[3] = document.getElementById('cTxt08').value
+
+document.getElementById('cDiv02').innerHTML = 'the data number you chose was ' + cNum + 'and the data it displays is ' + cArray[cSum]
+}">
+<div id="cDiv02">...</div>
