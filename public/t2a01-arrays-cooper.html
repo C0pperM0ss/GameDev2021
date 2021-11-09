@@ -40,3 +40,27 @@ document.getElementById('myDiv01').innerHTML = mySum
 }">
 <div id="myDiv01">...</div>
 <br>
+
+
+<input type=textarea id="cTxt01" value="write your name here"><br>
+<input type=textarea id="cTxt02" value="write your age here"><br>
+<input type=textarea id="cTxt03" value="write your eye color here"><br>
+<input type=textarea id="cTxt04" value="write your fav food here"><br>
+<input type=number id="cNum01" value=3>
+<input type=button value="submit data" onclick="{
+let cTemp = document.getElementById('cNum01').value
+let cSum = ''
+document.getElementById('cDiv01').innerHTML = ''
+
+cArray = new Array()
+cArray[0] = document.getElementById('cTxt01').value
+cArray[1] = document.getElementById('cTxt02').value
+cArray[2] = document.getElementById('cTxt03').value
+cArray[3] = document.getElementById('cTxt04').value
+                                                
+for (let cLoop = 0; cLoop < cTemp; cLoop++){
+cSum += 'array number:' + cLoop + ' array entry:' + cArray[cLoop] + '<br>'
+}
+document.getElementById('cDiv01').innerHTML = cSum
+}">
+<div id="cDiv01">...</div>
