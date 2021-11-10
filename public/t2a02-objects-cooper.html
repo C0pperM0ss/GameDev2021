@@ -80,8 +80,11 @@ document.getElementById('cDiv02').innerHTML += 'eye color: ' + cPerson.eyeColor 
   
   function cNum() {
   let cNum01 = document.getElementById('cNum01').value
-  if (cNum01 > 10|| cNum01 < 1) {
+  if (cNum01 == 11) {
     cNum01 = 1
+  }
+  if (cNum01 == 0) {
+    cNum01 = 1 
   }
   }
 </script>
