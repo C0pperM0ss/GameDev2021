@@ -80,4 +80,24 @@ cArray[3] = document.getElementById('cTxt08').value
 
 document.getElementById('cDiv02').innerHTML = 'the data number you chose was ' + cNum + ' and the data it displays is ' + cArray[cSum]
 }">
-<div id="cDiv02">...</div>
+<div id="cDiv02">...</div><br><br>
+
+<input type=textarea id="cTxt09" value="1. write your name here"><br>
+<input type=textarea id="cTxt10" value="2. write your age here"><br>
+<input type=textarea id="cTxt11" value="3. write your eye color here"><br>
+<input type=textarea id="cTxt12" value="4. write your fav food here"><br>
+<input type=number id="cNum03" value=3> <input type=number id="cNum04" value=3> which data would you like to print?<br>
+<input type=button value="submit data" onclick="{
+let cNum = document.getElementById('cNum03').value
+let cNum01 = document.getElementById('cNum04').value
+let cSum = cNum - 1
+let cSum01 = cNum01 - 1
+cArray = new Array()
+cArray[0] = 'you chose the data about the name which is: ' + document.getElementById('cTxt09').value
+cArray[1] = 'you chose the data about the age which is: ' + document.getElementById('cTxt10').value
+cArray[2] = 'you chose the data about the eye color which is: ' + document.getElementById('cTxt11').value
+cArray[3] = 'you chose the data about the favorite food' + document.getElementById('cTxt12').value
+
+document.getElementById('cDiv03').innerHTML = cArray[cSum] + ', and ' + cArray[cSum01]
+}">
+<div id="cDiv03">...</div>
