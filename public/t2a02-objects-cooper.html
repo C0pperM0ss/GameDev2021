@@ -75,12 +75,12 @@ document.getElementById('cDiv02').innerHTML += 'eye color: ' + cPerson.eyeColor 
 <br>
 <br>
 <h3> coopers stupidly complicated dumb calculator</h3>
-<input type=number onclick="{cNum()}" id="cNum" value=3> input how many numbers you want (cant go above 10)<br>
+<input type=number onclick="{cNum()}" id="cNum01" value=3> input how many numbers you want (cant go above 10)<br>
 <script>
   
   function cNum() {
-  let cNum01 = document.getElementById('cNum').value
-  if (cNum01 == 11|| cNum01 == 0) {
-    cNum = 1
+  let cNum01 = document.getElementById('cNum01').value
+  if (cNum01 > 10|| cNum01 < 1) {
+    cNum01 = 1
   }
   }
