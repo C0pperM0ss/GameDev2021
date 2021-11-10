@@ -51,3 +51,24 @@ document.getElementById('cDiv01').innerHTML += 'eye color: ' + cPerson.eyeColor 
 
 <div id="cDiv01">...</div>
 <br>
+<br>
+<input type=textarea value="Jane" id="cTxt01"><br>
+<input type=textarea value="Doe" id="cTxt02"><br>
+<input type=textarea value="45" id="cTxt03"><br>
+<input type=textarea value="Brown" id="cTxt04"><br>
+<input type=button value="submit your data" onclick="{
+  let cPerson = {
+'first' : document.getElementById('cTxt01').value,
+'last': document.getElementById('cTxt02').value,
+'age' : document.getElementById('cTxt03').value,
+'hair' : document.getElementById('cTxt04').value
+}
+document.getElementById('cDiv02').innerHTML = '<br> this person is: <br>'
+document.getElementById('cDiv02').innerHTML += 'first Name: ' + cPerson.first + '<br>'
+document.getElementById('cDiv02').innerHTML += 'Last Name: ' + cPerson.last + '<br>'
+document.getElementById('cDiv02').innerHTML += 'age: ' + cPerson.age + '<br>'
+document.getElementById('cDiv02').innerHTML += 'eye color: ' + cPerson.eyeColor + '<br>'
+}">
+
+<div id="cDiv02">...</div>
+<br>
