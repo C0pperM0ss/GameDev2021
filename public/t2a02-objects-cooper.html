@@ -74,31 +74,3 @@ document.getElementById('cDiv02').innerHTML += 'eye color: ' + cPerson.eyeColor 
 <br>
 <br>
 <br>
-<h3> coopers stupidly complicated dumb calculator</h3>
-<input type=number onclick="{cNum()}" id="cNum1" value=3> input how many numbers you want (cant go above 10)<br>
-<input type=button value="click this to generate your text boxes" id="cBtn01" onclick="{
-  document.getElementById('cDiv03').innerHTML = ''
-  let cTemp = ''                                                   
-  let cMax = parseInt(document.getElementById('cNum1').value)                         
-  let cVar = '<input type=number id="cNum0' + cMax + '" value="3">'
-  
-  for (let cLoop = 0; cLoop < cMax; cLoop++ ){
-
-      
-    cTemp += cVar + '<br>'
-}
-document.getElementById('cDiv04').innerHTML = cTemp
-}">
-
-<div id="cDiv04">...</div>
-<script>
-  
-  function cNum() {
-  if (document.getElementById('cNum01').value >= 11) {
-    document.getElementById('cNum01').value = 1
-  }
-  if (document.getElementById('cNum01').value <= 0) {
-    document.getElementById('cNum01').value = 1 
-  }
-  }
-</script>
