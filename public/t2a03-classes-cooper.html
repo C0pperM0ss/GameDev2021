@@ -38,3 +38,65 @@ classes are like objects but they are more versatile, they allow people to exten
            myDog.myShow()
                }">
 <div id="myDiv01">...</div>
+  <input type=texr id="cText01" value="dog name, dog age"><br>
+  <input type=button value="classes adding in input" onclick="{
+      class cAnimal {
+                constructor(passName, passAge) {
+                 this.cName = passName;
+                 this.cAge = passAge;
+                }
+                cShow(){
+                  document.getElementById('cDiv01').innerHTML = 'Hello ' + this.cName + '. you are ' + this.cAge + ' years old<br>'
+                }
+        }
+           cDog = new cAnimal(document.getElementById('cText01').value)
+           cDog.cShow()
+               }">
+<div id="cDiv01">...</div>
+  <input type=texr id="cText02" value="dog name"><br>
+    <input type=texr id="cText03" value=" dog age"><br>
+  <input type=button value="classes adding in split input" onclick="{
+      class cAnimal {
+                constructor(passName, passAge) {
+                 this.cName = passName;
+                 this.cAge = passAge;
+                }
+                cShow(){
+                  document.getElementById('cDiv02').innerHTML = 'Hello ' + this.cName + '. you are ' + this.cAge + ' years old<br>'
+                }
+        }
+           cDog = new cAnimal(document.getElementById('cText02').value, document.getElementById('cText03').value)
+           cDog.cShow()
+               }">
+<div id="cDiv02">...</div>
+  <input type=texr id="cText04" value="dog name"><br>
+    <input type=texr id="cText05" value=" dog age"><br>
+  <input type=button value="classes adding in split input" onclick="{
+          if(document.getElementById('cRad01').checked == true){
+             class cAnimalDog {
+                constructor(passName, passAge) {
+                 this.cName = passName;
+                 this.cAge = passAge;
+                }
+                cShow(){
+                  document.getElementById('cDiv03').innerHTML = 'Hello your dogs name is ' + this.cName + '. your dogs age is ' + this.cAge + ' years old<br>'
+                }
+        }
+           cAnimal = new cAnimal(document.getElementById('cText04').value, document.getElementById('cText05').value)
+           cAnimal.cShow()
+                 }
+           if (document.getElementById('cRad02').checked == true) {
+            class cAnimalCat {
+                constructor(passName, passAge) {
+                 this.cName = passName;
+                 this.cAge = passAge;
+                }
+                cShow(){
+                  document.getElementById('cDiv03').innerHTML = 'Hello ' + this.cName + '. you are ' + this.cAge + ' years old<br>'
+                }
+                }
+           cAnimal = new cAnimal(document.getElementById('cText04').value, document.getElementById('cText05').value)
+           cAnimal.cShow()
+                }
+               }">
+<div id="cDiv03">...</div>
