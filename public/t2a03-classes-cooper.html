@@ -100,4 +100,22 @@ classes are like objects but they are more versatile, they allow people to exten
            cAnimal.cShow()
                 }
                }">
-<div id="cDiv03">...</div>
+<div id="cDiv03">...</div> <input type=text id="cText06" value="animal name"><br>
+    <input type=text id="cText07" value="animal age"><br>
+<input type=text id="cText08" value="type of animal"><br>
+  <input type=button value="classes adding in custom class name/answer 2" onclick="{
+           let cClass = document.getElementById('cText08').value
+               class cAnimal01 {
+                constructor(passName, passAge) {
+                 this.cName = passName;
+                 this.cAge = passAge;
+                }
+                cShow(){
+                  document.getElementById('cDiv04').innerHTML = 'Hello your ' + cClass + 's name is ' + this.cName + '. your ' + cClass + 's age is ' + this.cAge + ' years old<br>'
+                }
+                }
+           cAnimal = new cAnimal01(document.getElementById('cText07').value, document.getElementById('cText08').value)
+           cAnimal.cShow()
+                }
+               }">
+<div id="cDiv04">...</div>
