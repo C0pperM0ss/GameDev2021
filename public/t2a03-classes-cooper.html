@@ -40,7 +40,8 @@ classes are like objects but they are more versatile, they allow people to exten
 <div id="myDiv01">...</div>
   <input type=texr id="cText01" value="dog name, dog age"><br>
   <input type=button value="classes adding in input" onclick="{
-      class cAnimal {
+      let cDiv = document.getElementById('cText01').value
+                  class cAnimal {
                 constructor(passName, passAge) {
                  this.cName = passName;
                  this.cAge = passAge;
@@ -49,7 +50,7 @@ classes are like objects but they are more versatile, they allow people to exten
                   document.getElementById('cDiv01').innerHTML = 'Hello ' + this.cName + '. you are ' + this.cAge + ' years old<br>'
                 }
         }
-           cDog = new cAnimal(document.getElementById('cText01').value)
+           cDog = new cAnimal(cDiv)
            cDog.cShow()
                }">
 <div id="cDiv01">...</div>
