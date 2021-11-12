@@ -69,8 +69,8 @@ classes are like objects but they are more versatile, they allow people to exten
            cDog.cShow()
                }">
 <div id="cDiv02">...</div>
-  <input type=texr id="cText04" value="dog name"><input type=radio name="rad01" id="cRad01"><br>
-    <input type=texr id="cText05" value=" dog age"><iput type=radio name="rad01" id="cRad02"><br>
+  <input type=text id="cText04" value="animal name"><input type=radio name="rad01" id="cRad01">dogs<br>
+    <input type=text id="cText05" value="animal age"><iput type=radio name="rad01" id="cRad02">cats<br>
   <input type=button value="classes adding in split input" onclick="{
           if(document.getElementById('cRad01').checked == true){
              class cAnimalDog {
@@ -82,7 +82,7 @@ classes are like objects but they are more versatile, they allow people to exten
                   document.getElementById('cDiv03').innerHTML = 'Hello your dogs name is ' + this.cName + '. your dogs age is ' + this.cAge + ' years old<br>'
                 }
         }
-           cAnimal = new cAnimal(document.getElementById('cText04').value, document.getElementById('cText05').value)
+           cAnimal = new cAnimalDog(document.getElementById('cText04').value, document.getElementById('cText05').value)
            cAnimal.cShow()
                  }
            if (document.getElementById('cRad02').checked == true) {
@@ -95,7 +95,7 @@ classes are like objects but they are more versatile, they allow people to exten
                   document.getElementById('cDiv03').innerHTML = 'Hello ' + this.cName + '. you are ' + this.cAge + ' years old<br>'
                 }
                 }
-           cAnimal = new cAnimal(document.getElementById('cText04').value, document.getElementById('cText05').value)
+           cAnimal = new cAnimalCat(document.getElementById('cText04').value, document.getElementById('cText05').value)
            cAnimal.cShow()
                 }
                }">
