@@ -1,0 +1,40 @@
+version 0.0.1 
+
+<h3 align=center> t2a03 classes by cooper</h3>
+
+good refrence to classes from <a href="https://www.w3schools.com/js/js_classes.asp">w3 schools classes</a>
+
+<br><br>
+
+classes are like objects but they are more versatile, they allow people to extend/ send a class in the same page rather than having to pull it like objects.
+
+<h4> example classes code</h4>
+<pre>
+  constuctor(passname, passage) {
+    this.myname = passname;
+    this.myage = passage;
+    }
+    my show(){
+      document.getElementById('myDiv01').innerHTMl = 'Hello' + this.myName + '. you are ' +this.myAge + ' years old<br>'
+    }
+    myDog = new myAnimal('snickers', 5)
+    myDog.MyShow()
+    
+</pre>
+
+<h4> example working code</h4>
+  nothing <input type=texr id="myText01" value="useless at the moment"><br>
+  <input type=button value="example class set and show class animal" onclick="{
+      class myAnimal {
+                constructor(passName, passAge) {
+                 this.myName = passName;
+                 this.myAge =passAge;
+                }
+                myShow(){
+                  document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName = '. you are ' + this.myAge + ' years old<br>'
+                }
+        }
+           myDog = new myAnimal('snickers', 5)
+           myDog.myShow()
+               }">
+<div id="myDiv01">...</div>
