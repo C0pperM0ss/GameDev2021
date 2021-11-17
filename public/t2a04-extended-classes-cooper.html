@@ -3,6 +3,7 @@ version 0.0.1
 <h4 align=center> t2a04 extended classes cooper</h4>
 
 <a href="https://www.w3schools.com/jsref/jsref_class_extends.asp"> W3 Schools Extended Classes</a>: good refrence for extended classes<br>
+<b> extending classes are different function you can do to a class, like alter whats in them, add new class items into them, and add other classes ontop of classes</b>
 
 <h5>example code</h5>
 <pre>
@@ -26,3 +27,23 @@ return this.present() + ', it is a ' + this.model;
 mycar = new Model("Ford", "Mustang");
 document.getElementById("demo").innerHTML = mycar.show();
 </pre>
+
+<input type=button value="example class set and show class animal" onclick="{
+  
+ myDog = new myAnimal('Snickers',5)
+ myDog.myShow()
+
+}">
+
+<input type=button value="example extend class animal onclick="{
+       
+       class myCat extends myAnimal {
+       myShow(){
+       document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
+       }
+       }
+       myPet = new myCat('Fluffy', 14)
+       myPet.myShow()
+       
+      }">
+        <div id="myDiv01">...</div>
