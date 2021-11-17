@@ -30,6 +30,11 @@ document.getElementById("demo").innerHTML = mycar.show();
 
 <input type=button value="example class set and show class animal" onclick="{
   
+       class myAnimal {
+       myShow(){
+       document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat'
+       }                                                                      
+                                                                            
  myDog = new myAnimal('Snickers',5)
  myDog.myShow()
 
