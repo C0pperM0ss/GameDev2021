@@ -19,6 +19,15 @@ class cFood {
             document.getElementById('cDiv01').innerHTML = 'your favorite food is ' + this.cFood + ' and your foods tempurature is ' + this.cTemp + '<br>'
       }
 }
+class cYou {
+      constructor(passFname, passYage) {
+            this.cFname = passFname
+            this.cAge = passYage
+      }
+      cShow(){
+            document.getElementById('cDiv02').innerHTML = 'your first name is ' + this.cFname + ' and your age is ' + this.cYage + '<br>'
+      }
+}
 </script>
 
 
@@ -82,7 +91,7 @@ document.getElementById("demo").innerHTML = mycar.show();
 
 }"><br>
 
-<input type=button value="example extend class animal " onclick="{
+<input type=button value="c Test #2 " onclick="{
         cTxt01 = document.getElementById('cFood01').value
  cTxt02 = document.getElementById('cFood02').value
        class cFood03 extends cFood {
@@ -93,4 +102,38 @@ document.getElementById("demo").innerHTML = mycar.show();
        cFood04.cShow()
        
       }"><br>
-        <div id="cDiv01">...</div>
+        <div id="cDiv01">...</div><br>
+<input type=text value="first name" id="cFname"><br>
+<input type=text value="age" id="cAge"><br>
+
+<input type=button value="multiple extentions" onclick="{
+ cTxt01 = document.getElementById('cFname').value
+ cTxt02 = document.getElementById('cAge').value
+ cYou01 = new cYou(cTxt01, cTxt02)
+ cYou01.cShow()
+
+}"><br>
+
+<input type=button value="multi ex 2" onclick="{
+        cTxt01 = document.getElementById('cFname').value
+ cTxt02 = document.getElementById('cAge').value
+       class cYou02 extends cYou {
+       cShow() {
+       document.getElementById('cDiv02').innerHTML = this.cFname + ' this is your first name and you're ' + this.cYage + '<br>'
+    } }     
+       cYou05 = new cYou02(cTxt01, cTxt02)
+       cYou05.cShow()
+       
+      }"><br>
+<input type=button value="multi ex 3" onclick="{
+        cTxt01 = document.getElementById('cFname').value
+ cTxt02 = document.getElementById('cAge').value
+       class cYou06 extends cYou {
+       cShow() {
+       document.getElementById('cDiv02').innerHTML = this.cFname + ' this is your first name, but you do not like that name instead you will be called Fred and you're ' + this.cYage + ' but as Fred you are eternal<br>'
+    } }     
+       cYou05 = new cYou02(cTxt01, cTxt02)
+       cYou05.cShow()
+       
+      }"><br>
+        <div id="cDiv02">...</div>
