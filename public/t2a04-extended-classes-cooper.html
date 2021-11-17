@@ -1,0 +1,28 @@
+version 0.0.1 
+
+<h4 align=center> t2a04 extended classes cooper</h4>
+
+<a href="https://www.w3schools.com/jsref/jsref_class_extends.asp"> W3 Schools Extended Classes</a>: good refrence for extended classes<br>
+
+<h5>example code</h5>
+<pre>
+class Car {
+constructor(brand) {
+this.carname = brand;
+}
+present() {
+return 'I have a ' + this.carname;
+}
+}
+class Model extends Car {
+constructor(brand, mod) {
+super(brand);
+this.model = mod;
+}
+show() {
+return this.present() + ', it is a ' + this.model;
+}
+}
+mycar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = mycar.show();
+</pre>
