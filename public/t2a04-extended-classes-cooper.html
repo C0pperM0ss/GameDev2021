@@ -16,7 +16,7 @@ class cFood {
             this.cTemp = passTemp
       }
       cShow(){
-            document.getElementById('cDiv01').innerHTML = 'your favorite food is ' + this.cFood + 'and your foods tempurature is ' + this.cTemp + '<br>'
+            document.getElementById('cDiv01').innerHTML = 'your favorite food is ' + this.cFood + ' and your foods tempurature is ' + this.cTemp + '<br>'
       }
 }
 </script>
@@ -87,7 +87,7 @@ document.getElementById("demo").innerHTML = mycar.show();
  cTxt02 = document.getElementById('cFood02').value
        class cFood03 extends cFood {
        cShow() {
-       document.getElementById('cDiv01').innerHTML = this.cFood + 'you do not like this food, or that it is ' + this.cTemp + '<br>'
+       document.getElementById('cDiv01').innerHTML = this.cFood + ' you do not like this food, or that it is ' + this.cTemp + '<br>'
     } }     
        cFood04 = new cFood03(cTxt01, cTxt02)
        cFood04.cShow()
