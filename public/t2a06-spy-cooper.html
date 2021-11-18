@@ -1,5 +1,11 @@
 version 0.0.1
 
+<style>
+   
+   body {background-color:darkkhaki;}
+   
+</style>
+
 <h1 align=center>t2a06-spy-cooper.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -14,6 +20,40 @@ version 0.0.1
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
+}"><input type=button value=" cooper encrypt 1" onclick="{
+   let cTemp = ''
+   cString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let cLoop=0;   cLoop < cString.length; cLoop++){
+      cTemp = myString[myLoop]
+      if (cString[cLoop] == 'a') {cTemp  = 'z'} 
+      if (cString[cLoop] == 'b') {cTemp  = 'x'} 
+      if (cString[cLoop] == 'c') {cTemp  = 'c'} 
+      if (cString[cLoop] == 'd') {cTemp  = 'v'} 
+      if (cString[cLoop] == 'e') {cTemp  = 'b'} 
+      if (cString[cLoop] == 'f') {cTemp  = 'n'} 
+      if (cString[cLoop] == 'g') {cTemp  = 'm'} 
+      if (cString[cLoop] == 'h') {cTemp  = 'a'} 
+      if (cString[cLoop] == 'i') {cTemp  = 's'} 
+      if (cString[cLoop] == 'j') {cTemp  = 'd'} 
+      if (cString[cLoop] == 'k') {cTemp  = 'f'} 
+      if (cString[cLoop] == 'l') {cTemp  = 'g'} 
+      if (cString[cLoop] == 'm') {cTemp  = 'h'} 
+      if (cString[cLoop] == 'n') {cTemp  = 'j'} 
+      if (cString[cLoop] == 'o') {cTemp  = 'k'} 
+      if (cString[cLoop] == 'p') {cTemp  = 'l'} 
+      if (cString[cLoop] == 'q') {cTemp  = 'q'} 
+      if (cString[cLoop] == 'r') {cTemp  = 'w'} 
+      if (cString[cLoop] == 's') {cTemp  = 'e'} 
+      if (cString[cLoop] == 't') {cTemp  = 'r'} 
+      if (cString[cLoop] == 'u') {cTemp  = 't'} 
+      if (cString[cLoop] == 'v') {cTemp  = 'y'} 
+      if (cString[cLoop] == 'w') {cTemp  = 'u'} 
+      if (cString[cLoop] == 'x') {cTemp  = 'i'} 
+      if (cString[cLoop] == 'y') {cTemp  = 'o'} 
+      if (cString[cLoop] == 'z') {cTemp  = 'p'} 
+      cString[cLoop] = cTemp
+   }
+   document.getElementById('myArea02').value = cString.join('')
 }"><br><br>
 
 
@@ -30,7 +70,43 @@ version 0.0.1
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea03').value = myString.join('')
-}"><br><br>
+}">
+<input type=button value="decrypt cooper 1" onclick="{
+   let cTemp = ''
+   cString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let cLoop=0;   cLoop < cString.length; cLoop++){
+      cTemp = myString[myLoop]
+      if (cString[cLoop] == 'z') {cTemp  = 'a'} 
+      if (cString[cLoop] == 'x') {cTemp  = 'b'} 
+      if (cString[cLoop] == 'c') {cTemp  = 'c'} 
+      if (cString[cLoop] == 'v') {cTemp  = 'd'} 
+      if (cString[cLoop] == 'b') {cTemp  = 'e'} 
+      if (cString[cLoop] == 'n') {cTemp  = 'f'} 
+      if (cString[cLoop] == 'm') {cTemp  = 'g'} 
+      if (cString[cLoop] == 'a') {cTemp  = 'h'} 
+      if (cString[cLoop] == 's') {cTemp  = 'i'} 
+      if (cString[cLoop] == 'd') {cTemp  = 'j'} 
+      if (cString[cLoop] == 'f') {cTemp  = 'k'} 
+      if (cString[cLoop] == 'g') {cTemp  = 'l'} 
+      if (cString[cLoop] == 'h') {cTemp  = 'm'} 
+      if (cString[cLoop] == 'j') {cTemp  = 'n'} 
+      if (cString[cLoop] == 'k') {cTemp  = 'o'} 
+      if (cString[cLoop] == 'l') {cTemp  = 'p'} 
+      if (cString[cLoop] == 'q') {cTemp  = 'q'} 
+      if (cString[cLoop] == 'w') {cTemp  = 'r'} 
+      if (cString[cLoop] == 'e') {cTemp  = 's'} 
+      if (cString[cLoop] == 'r') {cTemp  = 't'} 
+      if (cString[cLoop] == 't') {cTemp  = 'u'} 
+      if (cString[cLoop] == 'y') {cTemp  = 'v'} 
+      if (cString[cLoop] == 'u') {cTemp  = 'w'} 
+      if (cString[cLoop] == 'i') {cTemp  = 'x'} 
+      if (cString[cLoop] == 'o') {cTemp  = 'y'} 
+      if (cString[cLoop] == 'p') {cTemp  = 'z'} 
+      cString[cLoop] = cTemp
+   }
+   document.getElementById('myArea03').value = cString.join('')
+}">
+<br><br>
 
 
 <textarea id="myArea03" rows=4 cols=70></textarea><br> 
