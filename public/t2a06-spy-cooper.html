@@ -53,10 +53,77 @@
    let X4 = x23
    let Y5 = y24
    let Z6 = z25
-   alert(a01)
-   alert(A1)
+   if (document.getElementById('cBtn01').clicked == true)
+   {
+        let cTemp = ''
+   cString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let cLoop=0;   cLoop < cString.length; cLoop++){
+      cTemp = cString[cLoop]
+      if (cString[cLoop] == 'a') {cTemp  = a01} 
+      if (cString[cLoop] == 'b') {cTemp  = b02} 
+      if (cString[cLoop] == 'c') {cTemp  = c03} 
+      if (cString[cLoop] == 'd') {cTemp  = d04} 
+      if (cString[cLoop] == 'e') {cTemp  = e05} 
+      if (cString[cLoop] == 'f') {cTemp  = f06} 
+      if (cString[cLoop] == 'g') {cTemp  = g07} 
+      if (cString[cLoop] == 'h') {cTemp  = h08} 
+      if (cString[cLoop] == 'i') {cTemp  = i09} 
+      if (cString[cLoop] == 'j') {cTemp  = j00} 
+      if (cString[cLoop] == 'k') {cTemp  = k10} 
+      if (cString[cLoop] == 'l') {cTemp  = l11} 
+      if (cString[cLoop] == 'm') {cTemp  = m12} 
+      if (cString[cLoop] == 'n') {cTemp  = n13} 
+      if (cString[cLoop] == 'o') {cTemp  = o14} 
+      if (cString[cLoop] == 'p') {cTemp  = p15} 
+      if (cString[cLoop] == 'q') {cTemp  = q16} 
+      if (cString[cLoop] == 'r') {cTemp  = r17} 
+      if (cString[cLoop] == 's') {cTemp  = s18} 
+      if (cString[cLoop] == 't') {cTemp  = t19} 
+      if (cString[cLoop] == 'u') {cTemp  = u20} 
+      if (cString[cLoop] == 'v') {cTemp  = v21} 
+      if (cString[cLoop] == 'w') {cTemp  = w22} 
+      if (cString[cLoop] == 'x') {cTemp  = x23} 
+      if (cString[cLoop] == 'y') {cTemp  = y24} 
+      if (cString[cLoop] == 'z') {cTemp  = z25} 
+      cString[cLoop] = cTemp
    }
-
+   document.getElementById('myArea02').value = cString.join('')
+   }
+   if (document.getElementById('cBtn02').clicked == true)
+        let cTemp = ''
+   cString = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let cLoop=0;   cLoop < cString.length; cLoop++){
+      cTemp = cString[cLoop]
+      if (cString[cLoop] == A1) {cTemp  = 'a'} 
+      if (cString[cLoop] == B2) {cTemp  = 'b'} 
+      if (cString[cLoop] == C3) {cTemp  = 'c'} 
+      if (cString[cLoop] == D4) {cTemp  = 'd'} 
+      if (cString[cLoop] == E5) {cTemp  = 'e'} 
+      if (cString[cLoop] == F6) {cTemp  = 'f'} 
+      if (cString[cLoop] == G7) {cTemp  = 'g'} 
+      if (cString[cLoop] == H8) {cTemp  = 'h'} 
+      if (cString[cLoop] == I9) {cTemp  = 'i'} 
+      if (cString[cLoop] == J0) {cTemp  = 'j'} 
+      if (cString[cLoop] == K1) {cTemp  = 'k'} 
+      if (cString[cLoop] == L2) {cTemp  = 'l'} 
+      if (cString[cLoop] == M3) {cTemp  = 'm'} 
+      if (cString[cLoop] == N4) {cTemp  = 'n'} 
+      if (cString[cLoop] == O5) {cTemp  = 'o'} 
+      if (cString[cLoop] == P6) {cTemp  = 'p'} 
+      if (cString[cLoop] == Q7) {cTemp  = 'q'} 
+      if (cString[cLoop] == R8) {cTemp  = 'r'} 
+      if (cString[cLoop] == S9) {cTemp  = 's'} 
+      if (cString[cLoop] == T0) {cTemp  = 't'} 
+      if (cString[cLoop] == U1) {cTemp  = 'u'} 
+      if (cString[cLoop] == V2) {cTemp  = 'v'} 
+      if (cString[cLoop] == W3) {cTemp  = 'w'} 
+      if (cString[cLoop] == X4) {cTemp  = 'x'} 
+      if (cString[cLoop] == Y5) {cTemp  = 'y'} 
+      if (cString[cLoop] == Z6) {cTemp  = 'z'} 
+      cString[cLoop] = cTemp
+   }
+   document.getElementById('myArea03').value = cString.join('')
+                                 }
 
 </script>
 
@@ -156,7 +223,7 @@ version 0.0.9
 }">
 <input type=button id="cBtn01" value="Why?" onclick="{
                                                      EnDe() 
-                                                     alert(a01)
+                                                 
                                                      }"><br><br>
 
 
@@ -245,6 +312,9 @@ version 0.0.9
    }
    document.getElementById('myArea03').value = cString.join('')
 }">
+<input type=button id="cBtn02" value="Why????" onclick="{
+                                                        EnDe()
+                                                        }">
 <br><br>
 
 
