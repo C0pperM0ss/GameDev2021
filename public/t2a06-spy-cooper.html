@@ -106,40 +106,7 @@ version 0.0.4
    }
    document.getElementById('myArea03').value = myString.join('')
 }">
-<input type=button value="decrypt cooper 2" onclick="{
-   let cTemp = ''
-   cString = document.getElementById('myArea02').value.toLowerCase().split('')
-   for (let cLoop=0;   cLoop < cString.length; cLoop++){
-      cTemp = cString[cLoop]
-      if (cString[cLoop] == '12 ') {cTemp  = 'a'} 
-      if (cString[cLoop] == '22 ') {cTemp  = 'b'} 
-      if (cString[cLoop] == '32 ') {cTemp  = 'c'} 
-      if (cString[cLoop] == '42 ') {cTemp  = 'd'} 
-      if (cString[cLoop] == '52 ') {cTemp  = 'e'} 
-      if (cString[cLoop] == '62 ') {cTemp  = 'f'} 
-      if (cString[cLoop] == '72 ') {cTemp  = 'g'} 
-      if (cString[cLoop] == '82 ') {cTemp  = 'h'} 
-      if (cString[cLoop] == '92 ') {cTemp  = 'i'} 
-      if (cString[cLoop] == '11 ') {cTemp  = 'j'} 
-      if (cString[cLoop] == '21 ') {cTemp  = 'k'} 
-      if (cString[cLoop] == '31 ') {cTemp  = 'l'} 
-      if (cString[cLoop] == '41 ') {cTemp  = 'n'} 
-      if (cString[cLoop] == '61 ') {cTemp  = 'o'} 
-      if (cString[cLoop] == '71 ') {cTemp  = 'p'} 
-      if (cString[cLoop] == '81 ') {cTemp  = 'q'} 
-      if (cString[cLoop] == '91 ') {cTemp  = 'r'} 
-      if (cString[cLoop] == '18 ') {cTemp  = 's'} 
-      if (cString[cLoop] == '27 ') {cTemp  = 't'} 
-      if (cString[cLoop] == '36 ') {cTemp  = 'u'} 
-      if (cString[cLoop] == '45 ') {cTemp  = 'v'} 
-      if (cString[cLoop] == '54 ') {cTemp  = 'w'} 
-      if (cString[cLoop] == '63 ') {cTemp  = 'x'} 
-      if (cString[cLoop] == '75 ') {cTemp  = 'y'} 
-      if (cString[cLoop] == '84 ') {cTemp  = 'z'} 
-      cString[cLoop] = cTemp
-   }
-   document.getElementById('myArea03').value = cString.join('')
-}">
+
 <input type=button value="decrypt cooper 1" onclick="{
    let cTemp = ''
    cString = document.getElementById('myArea02').value.toLowerCase().split('')
@@ -171,6 +138,40 @@ version 0.0.4
       if (cString[cLoop] == 'i') {cTemp  = 'x'} 
       if (cString[cLoop] == 'o') {cTemp  = 'y'} 
       if (cString[cLoop] == 'p') {cTemp  = 'z'} 
+      cString[cLoop] = cTemp
+   }
+   document.getElementById('myArea03').value = cString.join('')
+}">
+<input type=button value="decrypt cooper 2" onclick="{
+   let cTemp = ''
+   cString = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let cLoop=0;   cLoop < cString.length; cLoop++){
+      cTemp = cString[cLoop]
+      if (cString[cLoop] == '12 ') {cTemp  = 'a'} 
+      if (cString[cLoop] == '22 ') {cTemp  = 'b'} 
+      if (cString[cLoop] == '32 ') {cTemp  = 'c'} 
+      if (cString[cLoop] == '42 ') {cTemp  = 'd'} 
+      if (cString[cLoop] == '52 ') {cTemp  = 'e'} 
+      if (cString[cLoop] == '62 ') {cTemp  = 'f'} 
+      if (cString[cLoop] == '72 ') {cTemp  = 'g'} 
+      if (cString[cLoop] == '82 ') {cTemp  = 'h'} 
+      if (cString[cLoop] == '92 ') {cTemp  = 'i'} 
+      if (cString[cLoop] == '11 ') {cTemp  = 'j'} 
+      if (cString[cLoop] == '21 ') {cTemp  = 'k'} 
+      if (cString[cLoop] == '31 ') {cTemp  = 'l'} 
+      if (cString[cLoop] == '41 ') {cTemp  = 'n'} 
+      if (cString[cLoop] == '61 ') {cTemp  = 'o'} 
+      if (cString[cLoop] == '71 ') {cTemp  = 'p'} 
+      if (cString[cLoop] == '81 ') {cTemp  = 'q'} 
+      if (cString[cLoop] == '91 ') {cTemp  = 'r'} 
+      if (cString[cLoop] == '18 ') {cTemp  = 's'} 
+      if (cString[cLoop] == '27 ') {cTemp  = 't'} 
+      if (cString[cLoop] == '36 ') {cTemp  = 'u'} 
+      if (cString[cLoop] == '45 ') {cTemp  = 'v'} 
+      if (cString[cLoop] == '54 ') {cTemp  = 'w'} 
+      if (cString[cLoop] == '63 ') {cTemp  = 'x'} 
+      if (cString[cLoop] == '75 ') {cTemp  = 'y'} 
+      if (cString[cLoop] == '84 ') {cTemp  = 'z'} 
       cString[cLoop] = cTemp
    }
    document.getElementById('myArea03').value = cString.join('')
