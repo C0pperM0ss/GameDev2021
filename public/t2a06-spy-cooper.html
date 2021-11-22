@@ -1,7 +1,7 @@
 <script>
 //super complicated encoder/decoder
    
-   function En ()  {
+   function EnDE ()  {
    let a01 = Math.floor(Math.random() * 101)
    let b02 = Math.floor(Math.random() * 101)
    let c03 = Math.floor(Math.random() * 101)
@@ -28,8 +28,6 @@
    let x23 = Math.floor(Math.random() * 101)
    let y24 = Math.floor(Math.random() * 101)
    let z25 = Math.floor(Math.random() * 101)
-   }
-         function De () {
    let A = a01
    let B = b02
    let C = c03
@@ -157,8 +155,7 @@ version 0.0.6
    document.getElementById('myArea02').value = cString.join('')
 }">
 <input type=button id="cBtn01" value="Why?" onclick="{
-                                                     En() 
-                                                     De() 
+                                                     EnDe() 
                                                      alert(A)
                                                      }"><br><br>
 
