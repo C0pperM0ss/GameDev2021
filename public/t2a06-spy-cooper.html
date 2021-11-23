@@ -54,7 +54,6 @@
    let Y5 = y24
    let Z6 = z25
 
-   if (document.getElementById('cBtn01').clicked == true) {
         let cTemp = ''
    cString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let cLoop=0;   cLoop < cString.length; cLoop++){
@@ -88,43 +87,42 @@
       cString[cLoop] = cTemp
    }
    document.getElementById('myArea02').value = cString.join('')
+   
+        let cTemp2 = ''
+   cString2 = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let cLoop2=0;   cLoop2 < cString2.length; cLoop2++){
+      cTemp2 = cString2[cLoop2]
+      if (cString2[cLoop2] == A1) {cTemp2  = 'a'} 
+      if (cString2[cLoop2] == B2) {cTemp2  = 'b'} 
+      if (cString2[cLoop2] == C3) {cTemp2  = 'c'} 
+      if (cString2[cLoop2] == D4) {cTemp2  = 'd'} 
+      if (cString2[cLoop2] == E5) {cTemp2  = 'e'} 
+      if (cString2[cLoop2] == F6) {cTemp2  = 'f'} 
+      if (cString2[cLoop2] == G7) {cTemp2  = 'g'} 
+      if (cString2[cLoop2] == H8) {cTemp2  = 'h'} 
+      if (cString2[cLoop2] == I9) {cTemp2  = 'i'} 
+      if (cString2[cLoop2] == J0) {cTemp2  = 'j'} 
+      if (cString2[cLoop2] == K1) {cTemp2  = 'k'} 
+      if (cString2[cLoop2] == L2) {cTemp2  = 'l'} 
+      if (cString2[cLoop2] == M3) {cTemp2  = 'm'} 
+      if (cString2[cLoop2] == N4) {cTemp2  = 'n'} 
+      if (cString2[cLoop2] == O5) {cTemp2  = 'o'} 
+      if (cString2[cLoop2] == P6) {cTemp2  = 'p'} 
+      if (cString2[cLoop2] == Q7) {cTemp2  = 'q'} 
+      if (cString2[cLoop2] == R8) {cTemp2  = 'r'} 
+      if (cString2[cLoop2] == S9) {cTemp2  = 's'} 
+      if (cString2[cLoop2] == T0) {cTemp2  = 't'} 
+      if (cString2[cLoop2] == U1) {cTemp2  = 'u'} 
+      if (cString2[cLoop2] == V2) {cTemp2  = 'v'} 
+      if (cString2[cLoop2] == W3) {cTemp2  = 'w'} 
+      if (cString2[cLoop2] == X4) {cTemp2  = 'x'} 
+      if (cString2[cLoop2] == Y5) {cTemp2  = 'y'} 
+      if (cString2[cLoop2] == Z6) {cTemp2  = 'z'} 
+      cString2[cLoop2] = cTemp2
    }
-   if (document.getElementById('cBtn02').clicked == true) {
-        let cTemp = ''
-   cString = document.getElementById('myArea02').value.toLowerCase().split('')
-   for (let cLoop=0;   cLoop < cString.length; cLoop++){
-      cTemp = cString[cLoop]
-      if (cString[cLoop] == toString(A1)) {cTemp  = 'a'} 
-      if (cString[cLoop] == toString(B2)) {cTemp  = 'b'} 
-      if (cString[cLoop] == toString(C3)) {cTemp  = 'c'} 
-      if (cString[cLoop] == toString(D4)) {cTemp  = 'd'} 
-      if (cString[cLoop] == toString(E5)) {cTemp  = 'e'} 
-      if (cString[cLoop] == toString(F6)) {cTemp  = 'f'} 
-      if (cString[cLoop] == toString(G7)) {cTemp  = 'g'} 
-      if (cString[cLoop] == toString(H8)) {cTemp  = 'h'} 
-      if (cString[cLoop] == toString(I9)) {cTemp  = 'i'} 
-      if (cString[cLoop] == toString(J0)) {cTemp  = 'j'} 
-      if (cString[cLoop] == toString(K1)) {cTemp  = 'k'} 
-      if (cString[cLoop] == toString(L2)) {cTemp  = 'l'} 
-      if (cString[cLoop] == toString(M3)) {cTemp  = 'm'} 
-      if (cString[cLoop] == toString(N4)) {cTemp  = 'n'} 
-      if (cString[cLoop] == toString(O5)) {cTemp  = 'o'} 
-      if (cString[cLoop] == toString(P6)) {cTemp  = 'p'} 
-      if (cString[cLoop] == toString(Q7)) {cTemp  = 'q'} 
-      if (cString[cLoop] == toString(R8)) {cTemp  = 'r'} 
-      if (cString[cLoop] == toString(S9)) {cTemp  = 's'} 
-      if (cString[cLoop] == toString(T0)) {cTemp  = 't'} 
-      if (cString[cLoop] == toString(U1)) {cTemp  = 'u'} 
-      if (cString[cLoop] == toString(V2)) {cTemp  = 'v'} 
-      if (cString[cLoop] == toString(W3)) {cTemp  = 'w'} 
-      if (cString[cLoop] == toString(X4)) {cTemp  = 'x'} 
-      if (cString[cLoop] == toString(Y5)) {cTemp  = 'y'} 
-      if (cString[cLoop] == toString(Z6)) {cTemp  = 'z'} 
-      cString[cLoop] = cTemp
+   document.getElementById('myArea03').value = cString2.join('')
    }
-   document.getElementById('myArea03').value = cString.join('')
-   }
-   }
+   
 </script>
 
 
