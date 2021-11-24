@@ -11,8 +11,8 @@ version 0.0.1
    let cClock
 </script>
 <script>
+let cRotateAngle = 90
 function cRotate() {
-      let cRotateAngle = 0;
  document.getElementById('cBody').style.transform = "rotate(" + cRotateAngle + "deg)"
    cRotateAngle = cRotateAngle + 90
 }
@@ -28,6 +28,7 @@ function cRotate() {
 }">
 <input id="cBtn03" type=button value="everything rotate right" onclick="{
 cRotate()
+cRotateAngle = cRotateAngle + 90
 }">
    
 <input id="cBtn02" type=button value="background move right" onclick="{
