@@ -89,7 +89,7 @@
    document.getElementById('myArea02').value = cString.join('')
    
         let cTemp2 = ''
-   cString = document.getElementById('myArea02').value.toLowerCase().split('')
+   cString = document.getElementById('myArea02').value.toLowerCase().split(' ')
    for (let cLoop = 0;   cLoop < cString.length; cLoop++){
       cTemp2 = cString[cLoop]
       if (cString[cLoop] == a01) {cTemp2  = 'a'} 
