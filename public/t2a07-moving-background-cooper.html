@@ -16,7 +16,12 @@ function cRotate() {
  document.getElementById('cBody').style.transform = "rotate(" + cRotateAngle + "deg)"
 }
 </script>  
-   
+<script>
+let cRotateAngle2 = -90
+function cRotate2() {
+ document.getElementById('cBody').style.transform = "rotate(" + cRotateAngle2 + "deg)"
+}
+</script>  
    
    
 <input id="cBtn01" type=button value="background move left" onclick="{
@@ -28,6 +33,10 @@ function cRotate() {
 <input id="cBtn03" type=button value="everything rotate right" onclick="{
 cRotate()
 cRotateAngle = cRotateAngle + 90
+}">
+ <input id="cBtn04" type=button value="everything rotate left" onclick="{
+cRotate2()
+cRotateAngle = cRotateAngle - 90
 }">
    
 <input id="cBtn02" type=button value="background move right" onclick="{
