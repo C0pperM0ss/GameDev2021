@@ -9,28 +9,26 @@ version 0.0.1
 <script>
    let cGlobalX = 0
    let cClock
-   let rotateAngle = 90
+  
 
-function rotate(image) {
-   let rotateAngle = 90
-  image.setAttribute("style", "transform: rotater(" + rotateAngle + "deg)");
-  rotateAngle = rotateAngle + 90
+function cRotate() {
+    let cRotateAngle = 90
+   let cImage = document.getElementById('cBody')
+   cImage.setAttribute("style", "transform: rotate(" + cRotateAngle + "deg)");
+   cRotateAngle = cRotateAngle + 90
 }
-#rotater {
-  transition: all 0.3s ease;
-  border: 0.0625em solid black;
-  border-radius: 3.75em;
-}
-
 </script>
-<img id="rotater" onclick="rotate(this)" src="https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"/>
+
 <input id="cBtn01" type=button value="background move left" onclick="{
   cTemp = '100px 0px'
   cGlobalX -= 5
   cTemp =  cGlobalX + 'px 0px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
-
+<input id="cBtn03" type=button value="background rotate" onclick="{
+cRotate()
+}">
+   
 <input id="cBtn02" type=button value="background move right" onclick="{
   cTemp = '100px 0px'
   cGlobalX += 5
