@@ -4,7 +4,7 @@ version 0.0.1
 
 
 
-<body id="cBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+<body id="cBody" style="tranform: rotate(0deg); background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
 
 <script>
    let cGlobalX = 0
@@ -13,8 +13,7 @@ version 0.0.1
 <script>
 function cRotate() {
       let cRotateAngle = 0;
-   let cImage = document.getElementById('cBody')
-   cImage.setAttribute("style", "transform: rotate(" + cRotateAngle + "deg)");
+ document.getElementById('cBody').style.transform = "rotate(" + cRotateAngle + "deg)"
    cRotateAngle = cRotateAngle + 90
 }
 </script>  
