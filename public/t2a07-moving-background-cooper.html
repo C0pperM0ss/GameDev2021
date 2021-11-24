@@ -9,10 +9,10 @@ version 0.0.1
 <script>
    let cGlobalX = 0
    let cClock
-   let cRotateAngle = 0;
 </script>
 <script>
 function cRotate() {
+      let cRotateAngle = 0;
    let cImage = document.getElementById('cBody')
    cImage.setAttribute("style", "transform: rotate(" + cRotateAngle + "deg)");
    cRotateAngle = cRotateAngle + 90
