@@ -1,6 +1,11 @@
 <h2 align=center>t2a08-canvas by Cooper</h2>
 You use loops and variables to make fast fancy drawings <br><br>
+<script>
+let x = event.clientX
+let y = event.clientY    
 
+   
+</script>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
@@ -56,7 +61,12 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 
-<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{
+myContext.moveTo(0, 0);
+myContext.lineTo(X, Y);
+myContext.stroke();                                                                                           
+                                                                                            
+}"></canvas>
 
 <script>
    // set up global variables
