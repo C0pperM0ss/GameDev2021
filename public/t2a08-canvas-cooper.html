@@ -1,4 +1,13 @@
 <h2 align=center>t2a08-canvas by Cooper</h2>
+<script>
+  function cMouse () {
+  var cXpos;
+  var cYpos;
+  cXpos = window.event.screenX;
+  cYpos = window.event.screenY;
+  }
+
+</script>
 You use loops and variables to make fast fancy drawings <br><br>
 <div id="screenCoords" onclick="{ MousePos() }">...</div>
 <input type=button value=".lineTo(30,200)" onclick="{
@@ -62,16 +71,7 @@ myContext.beginPath();
 myContext.lineWidth = 1;   
 myContext.moveTo(0,0);
 myContext.lineTo(cXpos,cYpos);     
-                                                                                            }"></canvas>
-<script>
-  function cMouse () {
-  var cXpos;
-  var cYpos;
-  cXpos = window.event.screenX;
-  cYpos = window.event.screenY;
-  }
-
-</script>
+}"></canvas>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
