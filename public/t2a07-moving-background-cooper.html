@@ -8,6 +8,7 @@ version 0.0.1
 
 <script>
    let cGlobalX = 0
+   let cGlobalY = 0
    let cClock
 </script>
 <script>
@@ -37,7 +38,19 @@ function cRotate2() {
   cTemp =  cGlobalX + 'px 0px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
-
+<input id="cBtn05" type=button value="background move Up" onclick="{
+  cTemp = '0px 100px'
+  cGlobalY += 5
+  cTemp =  '0px ' + cGlobalY + 'px'
+  document.getElementById('cBody').style.backgroundPosition = cTemp
+}">
+<input id="cBtn06" type=button value="background move Down" onclick="{
+  cTemp = '0px 100px'
+  cGlobalY -= 5
+  cTemp =  '0px ' + cGlobalY + 'px'
+  document.getElementById('cBody').style.backgroundPosition = cTemp
+}">
+   
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(cClock)
   cClock = setInterval(function(){
@@ -52,6 +65,20 @@ function cRotate2() {
   }, 100)
     
 }">
+<input type=button value="Auto Background Up" onclick="{
+  clearInterval(cClock)
+  cClock = setInterval(function(){
+     document.getElementById('cBtn05').click() 
+  }, 100)
+    
+}">
+<input type=button value="Auto Background Down" onclick="{
+  clearInterval(cClock)
+  cClock = setInterval(function(){
+     document.getElementById('cBtn06').click() 
+  }, 100)
+    
+}">   
 <input id="cBtn03" type=button value="everything rotate right" onclick="{
 cRotate()
 cRotateAngle = cRotateAngle + 90
