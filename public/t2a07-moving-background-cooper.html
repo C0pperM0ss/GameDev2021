@@ -28,26 +28,26 @@ function cRotate2() {
 <input id="cBtn01" type=button value="background move left" onclick="{
   cTemp = '100px 0px'
   cGlobalX -= 5
-  cTemp =  cGlobalX + 'px 0px'
+  cTemp =  cGlobalX + 'px ' + cGlobalY + 'px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
    
 <input id="cBtn02" type=button value="background move right" onclick="{
   cTemp = '100px 0px'
   cGlobalX += 5
-  cTemp =  cGlobalX + 'px 0px'
+  cTemp =  cGlobalX + 'px ' + cGlobalY + 'px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
 <input id="cBtn05" type=button value="background move Up" onclick="{
   cTemp = '0px 100px'
-  cGlobalY += 5
-  cTemp =  '0px ' + cGlobalY + 'px'
+  cGlobalY -= 5
+  cTemp =  cGlobalX + 'px ' + cGlobalY + 'px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
 <input id="cBtn06" type=button value="background move Down" onclick="{
   cTemp = '0px 100px'
-  cGlobalY -= 5
-  cTemp =  '0px ' + cGlobalY + 'px'
+  cGlobalY += 5
+  cTemp =  cGlobalX + 'px ' + cGlobalY + 'px'
   document.getElementById('cBody').style.backgroundPosition = cTemp
 }">
    
