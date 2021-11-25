@@ -4,18 +4,8 @@ You use loops and variables to make fast fancy drawings <br><br>
   function MousePos () {
   var xpos;
   var ypos;
-  if (mouseEvent)
-  {
-    //FireFox
-    xpos = mouseEvent.screenX;
-    ypos = mouseEvent.screenY;
-  }
-  else
-  {
-    //IE
     xpos = window.event.screenX;
     ypos = window.event.screenY;
-  }
   document.getElementById("screenCoords").innerHTML = xpos + ", " + ypos;
   }
 </script>
