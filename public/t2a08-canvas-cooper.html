@@ -1,9 +1,24 @@
 <h2 align=center>t2a08-canvas by Cooper</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 <script>
-
+  var xpos;
+  var ypos;
+  if (mouseEvent)
+  {
+    //FireFox
+    xpos = mouseEvent.screenX;
+    ypos = mouseEvent.screenY;
+  }
+  else
+  {
+    //IE
+    xpos = window.event.screenX;
+    ypos = window.event.screenY;
+  }
+  document.getElementById("screenCoords").innerHTML = xpos + ", " + ypos;
    
 </script>
+<div id="screenCoords">...</div>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
@@ -65,10 +80,6 @@ myContext.lineTo(cX, cY);
 myContext.stroke();                                                                                           
                                                                                             
 }"></canvas>
-<script>
-var cX = event.clientX;
-var cY = event.clientY;  
-</script>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
