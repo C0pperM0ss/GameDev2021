@@ -66,7 +66,10 @@ You use loops and variables to make fast fancy drawings <br><br>
 }"><br><br>
 
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
-cMouse()
+  let cXpos;
+  let cYpos;
+  cXpos = window.event.screenX;
+  cYpos = window.event.screenY;
 myContext.beginPath();
 myContext.lineWidth = 1;   
 myContext.moveTo(0,0);
