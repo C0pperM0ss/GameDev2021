@@ -1,6 +1,7 @@
 <h2 align=center>t2a08-canvas by Cooper</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 <script>
+  function MousePos () {
   var xpos;
   var ypos;
   if (mouseEvent)
@@ -16,9 +17,9 @@ You use loops and variables to make fast fancy drawings <br><br>
     ypos = window.event.screenY;
   }
   document.getElementById("screenCoords").innerHTML = xpos + ", " + ypos;
-   
+  }
 </script>
-<div id="screenCoords">...</div>
+<div id="screenCoords" onclick="{ MousePos() }">...</div>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
