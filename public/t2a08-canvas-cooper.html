@@ -63,14 +63,14 @@ let cYpos2 = cYpos - 290
 myContext.beginPath();
 myContext.lineWidth = 1;   
 myContext.moveTo(cXpos2,cYpos2);
-document.getElementById('myCoolTag').ondblclick = "
+document.getElementById('myCoolTag').ondblclick = '
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
 let cYpos4 = cYpos3 - 290
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();               
-"}"></canvas>
+'}"></canvas>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
