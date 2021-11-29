@@ -55,7 +55,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
-
+<h3> click once to set the first line position and click twice to set the second creating a line</h3>
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
@@ -67,8 +67,8 @@ myContext.moveTo(cXpos2,cYpos2);
 }" ondblclick="{
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
-let cXpos4 = cXpos - 10   
-let cYpos4 = cYpos - 290
+let cXpos4 = cXpos3 - 10   
+let cYpos4 = cYpos3 - 290
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();               
 }"></canvas>
