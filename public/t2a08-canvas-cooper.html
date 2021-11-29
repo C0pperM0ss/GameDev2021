@@ -6,15 +6,6 @@ cClick = cClick + 1
 
 }">
 <script>
-   function cClick2() {
-   let cClick = 0 
-   if (cClick = 1) {
-   setTimeout(cClick = 0, 1000)
-   }
-   if (cClick => 2) {
-   setTimeout(cClick = 0, 2000)  
-   }
-   }
    function cDraw() {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
@@ -34,7 +25,15 @@ myContext.lineTo(cXpos4,cYpos4);
 myContext.stroke();
 }
 }
-
+   function cClick2() {
+   let cClick = 0 
+   if (cClick = 1) {
+   setTimeout(cClick = 0, 1000)
+   }
+   if (cClick => 2) {
+   setTimeout(cClick = 0, 2000)  
+   }
+   }
 </script>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
