@@ -1,6 +1,41 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.2</h2>
 You use loops and variables to make fast fancy drawings <br><br>
-<div id="screenCoords" onclick="{ MousePos() }">...</div>
+<body id="cBody" onclick="{
+cClick()
+cClick = cClick + 1         
+
+}">
+<script>
+   function cClick() {
+   let cClick = 0 
+   if (cClick = 1) {
+   setTimeout(cClick = 0;, 1000);  
+   }
+   if (cClick => 2) {
+   setTimeout(cClick = 0;, 2000);  
+   }
+   }
+   function cDraw() {
+let cXpos3 = window.event.screenX;
+let cYpos3 = window.event.screenY;
+let cXpos4 = cXpos3 - 10   
+let cYpos4 = cYpos3 - 290
+if (cClick == 1) { 
+let cXpos = window.event.screenX;
+let cYpos = window.event.screenY;
+let cXpos2 = cXpos - 10   
+let cYpos2 = cYpos - 290
+ myContext.beginPath();
+myContext.moveTo(cXpos2,cYpos2);
+}
+if (cClick => 2) {
+myContext.lineWidth = 1;  
+myContext.lineTo(cXpos4,cYpos4);     
+myContext.stroke();
+}
+}
+
+</script>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
@@ -56,21 +91,8 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
-let cXpos = window.event.screenX;
-let cYpos = window.event.screenY;
-let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 290
-myContext.beginPath();
-myContext.lineWidth = 1;   
-myContext.moveTo(cXpos2,cYpos2);
-document.getElementById('myCoolTag').ondblclick = '
-let cXpos3 = window.event.screenX;
-let cYpos3 = window.event.screenY;
-let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 290
-myContext.lineTo(cXpos4,cYpos4);     
-myContext.stroke();               
-'}"></canvas>
+cDraw()            
+}"></canvas>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
