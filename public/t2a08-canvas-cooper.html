@@ -1,15 +1,5 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.2</h2>
 You use loops and variables to make fast fancy drawings <br><br>
-<script>
-   
-   function cResult01 () {
-  let cXpos;
-  let cYpos;
-  cXpos = window.event.screenX;
-  cYpos = window.event.screenY;
-   }
-   
-</script>
 <div id="screenCoords" onclick="{ MousePos() }">...</div>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
@@ -69,8 +59,8 @@ You use loops and variables to make fast fancy drawings <br><br>
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
-let cXpos2 = cXpos + 50    
-let cYpos2 = cYpos + 50
+let cXpos2 = cXpos - 50    
+let cYpos2 = cYpos - 50
 myContext.beginPath();
 myContext.lineWidth = 1;   
 myContext.moveTo(0,0);
