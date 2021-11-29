@@ -1,9 +1,14 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.2</h2>
 You use loops and variables to make fast fancy drawings <br><br>
-<body id="cBody" onclick="{
-cClick2()
-cClick = cClick + 1         
-
+<body id="cBody" onclick={
+   let cClick = 0
+   document.getElementById('cBody').clicked = cClick = cClick + 1
+   if (cClick == 1) {
+   setTimeout(cClick = 0, 1000)
+   }
+   if (cClick => 2) {
+   setTimeout(cClick = 0, 2000)  
+   }
 }">
 <script>
    function cDraw() {
@@ -25,15 +30,6 @@ myContext.lineTo(cXpos4,cYpos4);
 myContext.stroke();
 }
 }
-   function cClick2() {
-   let cClick = 0 
-   if (cClick = 1) {
-   setTimeout(cClick = 0, 1000)
-   }
-   if (cClick => 2) {
-   setTimeout(cClick = 0, 2000)  
-   }
-   }
 </script>
 <input type=button value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
