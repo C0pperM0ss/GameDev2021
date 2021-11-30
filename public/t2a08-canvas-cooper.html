@@ -9,7 +9,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    if (cClick == 1) {
    setTimeout(cClick = 0, 1000)
    }
-   if (cClick => 2) {
+   if (cClick >= 2) {
    setTimeout(cClick = 0, 2000)  
    }
 }">
@@ -27,7 +27,7 @@ let cYpos2 = cYpos - 290
  myContext.beginPath();
 myContext.moveTo(cXpos2,cYpos2);
 }
-if (cClick => 2) {
+if (cClick >= 2) {
 myContext.lineWidth = 1;  
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
