@@ -2,30 +2,29 @@
 You use loops and variables to make fast fancy drawings <br><br>
 <body id="cBody" onclick="{
 cClick = cClick + 1
-
+cClick2 = cClick2 + 1
 }">
 <script>
 let cClick = 0
+let cClick2 = 0
 function cFunc2() {
  cClick = 0  
 }
 function cFunc3() {
- cClick = 0  
+cClick2 = 0
 }
-
-function cDraw() {
-   
+function cDraw() {  
 if (cClick == 1) {
-setTimeout(cFunc2, 500)
+setTimeout(cFunc2, 1000)
 }
-if (cClick >= 2) {
-setTimeout(cFunc3, 500)
+if (cClick2 == 2) {
+setTimeout(cFunc3, 1000)
 }
+if (cClick2 == 2) { 
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
 let cYpos2 = cYpos - 290
-if (cClick >= 2) { 
 myContext.beginPath();
 myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
