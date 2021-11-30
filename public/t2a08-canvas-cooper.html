@@ -6,13 +6,20 @@ cClick = cClick + 1
 }">
 <script>
 let cClick = 0
+function cFunc2() {
+ cClick = 0  
+}
+function cFunc3() {
+ cClick = 0  
+}
+
 function cDraw() {
    
 if (cClick == 1) {
-setTimeout(cFunc2() {cClick = 0}, 2000)
+setTimeout(cFunc2, 2000)
 }
 if (cClick >= 2) {
-setTimeout(cFunc3() {cClick = 0}, 2000)
+setTimeout(cFunc3, 2000)
 alert('you clicked Twice!')
 }
 let cXpos3 = window.event.screenX;
