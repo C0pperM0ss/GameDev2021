@@ -1,5 +1,5 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.3</h2>
-You use loops and variables to make fast fancy drawings <br><br>
+You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> <br><br>
 <body id="cBody" onclick="{
 cClick = cClick + 1
 }">
@@ -23,6 +23,7 @@ let cYpos2 = cYpos - 290
 myContext.beginPath();
 myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
+document.getElementById('cDiv01').innerHTML = cXpos2 + ', ' + cYpos2
 }
 if (cClick == 2) {
 let cXpos3 = window.event.screenX;
@@ -31,6 +32,7 @@ let cXpos4 = cXpos3 - 10
 let cYpos4 = cYpos3 - 290  
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
+document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
 }
 }
 </script>
