@@ -16,25 +16,26 @@ function cFunc3() {
 function cDraw() {
    
 if (cClick == 1) {
-setTimeout(cFunc2, 1000)
+setTimeout(cFunc2, 500)
 }
 if (cClick >= 2) {
-setTimeout(cFunc3, 1000)
+setTimeout(cFunc3, 500)
 }
-let cXpos3 = window.event.screenX;
-let cYpos3 = window.event.screenY;
-let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 290
+
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
 let cYpos2 = cYpos - 290
- myContext.beginPath();
+myContext.beginPath();
+myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
 }
 if (cClick >= 2) {
-myContext.lineWidth = 1;  
+let cXpos3 = window.event.screenX;
+let cYpos3 = window.event.screenY;
+let cXpos4 = cXpos3 - 10   
+let cYpos4 = cYpos3 - 290  
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 }
