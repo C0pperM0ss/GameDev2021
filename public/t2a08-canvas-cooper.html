@@ -18,21 +18,21 @@ setTimeout(cFunc2, 2000)
 if (cClick2 == 2) {
 setTimeout(cFunc2, 1000)
 }
-if (cClick == 1) { 
+if (cClick == 2) { 
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 340
+let cYpos2 = cYpos - 350
 myContext.beginPath();
 myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
 document.getElementById('cDiv01').innerHTML = cXpos2 + ', ' + cYpos2
 }
-if (cClick2 == 2) {
+if (cClick2 == 1) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 340
+let cYpos4 = cYpos3 - 350
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
