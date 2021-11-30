@@ -2,17 +2,20 @@
 You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> <br><br>
 <body id="cBody" onclick="{
 cClick = cClick + 1
+cClick2 = cClick2 + 1
 }">
 <script>
 let cClick = 0
+let cClick2 = 0
 function cFunc2() {
- cClick = 0  
+ cClick = 0
+ cClick = 0
 }
 function cDraw() {  
 if (cClick == 1) {
 setTimeout(cFunc2, 2000)
 }
-if (cClick == 2) {
+if (cClick2 == 2) {
 setTimeout(cFunc2, 1000)
 }
 if (cClick == 1) { 
@@ -25,7 +28,7 @@ myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
 document.getElementById('cDiv01').innerHTML = cXpos2 + ', ' + cYpos2
 }
-if (cClick == 2) {
+if (cClick2 == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
