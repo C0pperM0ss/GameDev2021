@@ -1,19 +1,20 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.2</h2>
 You use loops and variables to make fast fancy drawings <br><br>
+<body id="cBody" onclick="{
+cClick = cClick + 1
+
+}">
 <script>
-   function cDraw() {
-     let cClick = 0
-   if (document.getElementById('cBody').onclick = true) {
-   cClick = cClick + 1   
-   }
+let cClick = 0
+function cDraw() {
    
-   if (cClick == 1) {
-   setTimeout(cClick = 0, 1000)
-   alert('you clicked!')
-   }
-   if (cClick >= 2) {
-   setTimeout(cClick = 0, 2000)  
-   }
+if (cClick == 1) {
+setTimeout(cClick = 0, 1000)
+alert('you clicked!')
+}
+if (cClick >= 2) {
+setTimeout(cClick = 0, 2000)  
+}
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
