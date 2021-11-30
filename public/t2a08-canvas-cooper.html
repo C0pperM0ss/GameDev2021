@@ -4,7 +4,9 @@ You use loops and variables to make fast fancy drawings first position<div id="c
 cClick = cClick + 1
 cClick2 = cClick2 + 1
 }" onmouseover="{
-document.getElementById('cDiv03').innerHTML = cXpos2 + ', ' + cYpos2
+let cXpos = window.event.screenX;
+let cYpos = window.event.screenY;
+document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos
 }">
 <script>
 let cClick = 0
@@ -24,7 +26,7 @@ if (cClick == 1) {
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 350
+let cYpos2 = cYpos - 345
 myContext.beginPath();
 myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
@@ -34,7 +36,7 @@ if (cClick2 == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 350
+let cYpos4 = cYpos3 - 345
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
