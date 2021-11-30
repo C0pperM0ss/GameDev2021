@@ -1,8 +1,10 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.0.3</h2>
-You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> <br><br>
+You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> current position <div id="cDiv03">..</div> <br><br>
 <body id="cBody" onclick="{
 cClick = cClick + 1
 cClick2 = cClick2 + 1
+}" onmouseover="{
+document.getElementById('cDiv03').innerHTML = cXpos2 + ', ' + cYpos2
 }">
 <script>
 let cClick = 0
