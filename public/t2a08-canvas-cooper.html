@@ -2,20 +2,13 @@
 You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> current position <div id="cDiv03">..</div> <br><br>
 <script>
 let cClick = 0
-
-setInterval(cClick04(), 1000);
-
 function cFunc2 () {
 cClick = 0 
 }
- 
-function cClick04() {
-if (cClick == 1) {
+function cDraw() {  
+if (cClick == 2) {
 setTimeout(cFunc2, 500)
 }
-}
-function cDraw() {  
-
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
