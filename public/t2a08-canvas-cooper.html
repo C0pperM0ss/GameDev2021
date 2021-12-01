@@ -16,11 +16,11 @@ function cFunc2() {
  cClick2 = 0
 }
 function cDraw() {  
-if (cClick == 2) {
+if (cClick == 1) {
 setTimeout(cFunc2, 3000)
 }
-if (cClick2 == 1) {
-setTimeout(cFunc2, 3000)
+if (cClick == 3) {
+cClick = 0
 }
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
@@ -32,7 +32,7 @@ myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
 document.getElementById('cDiv01').innerHTML = cXpos2 + ', ' + cYpos2
 }
-if (cClick2 == 2) {
+if (cClick == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
