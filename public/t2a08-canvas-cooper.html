@@ -13,7 +13,7 @@ if (cClick == 1) {
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 370
+let cYpos2 = cYpos - 380
 myContext.beginPath();
 myContext.lineWidth = 1;
 myContext.moveTo(cXpos2,cYpos2);
@@ -23,7 +23,7 @@ if (cClick == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 370
+let cYpos4 = cYpos3 - 380
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
