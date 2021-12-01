@@ -13,14 +13,16 @@ let cClick = 0
 let cClick2 = 0
 function cFunc2() {
  cClick = 0
- cClick2 = 0
+}
+function cFunc3() {
+cClick2 = 0
 }
 function cDraw() {  
 if (cClick == 1) {
 setTimeout(cFunc2, 2000)
 }
-if (cClick2 == 2) {
-setTimeout(cFunc2, 1000)
+if (cClick2 == 1) {
+setTimeout(cFunc3, 2000)
 }
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
