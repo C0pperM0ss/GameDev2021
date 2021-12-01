@@ -1,27 +1,22 @@
 <h2 align=center>t2a08-canvas by Cooper version 0.1.6</h2>
 You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> current position <div id="cDiv03">..</div> <br><br>
-<body id="cBody" onclick="{
-cClick = cClick + 1
-cClick2 = cClick2 + 1
-}" onmouseover="{
-let cXpos = window.event.screenX;
-let cYpos = window.event.screenY;
-document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos
 }">
 <script>
 let cClick = 0
-let cClick2 = 0
-function cFunc2() {
- cClick = 0
- cClick2 = 0
+
+setInterval(cClick04(), 1000);
+
+function cFunc2 () {
+cClick = 0 
+}
+ 
+function cClick04() {
+if (cClick == 1) {
+setTimeout(cFunc2, 500)
+}
 }
 function cDraw() {  
-if (cClick == 1) {
-setTimeout(cFunc2, 3000)
-}
-if (cClick == 3) {
-cClick = 0
-}
+
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
@@ -98,7 +93,13 @@ document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 <canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
+cClick = cClick + 1
+
 cDraw()            
+}"onmouseover="{
+let cXpos = window.event.screenX;
+let cYpos = window.event.screenY;
+document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos
 }"></canvas>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
