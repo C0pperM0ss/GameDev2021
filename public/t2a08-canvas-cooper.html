@@ -2,6 +2,11 @@
 You use loops and variables to make fast fancy drawings first position<div id="cDiv01">...</div>second position<div id="cDiv02">...</div> current position <div id="cDiv03">..</div> <br><br>
 <script>
 let cClick = 0
+function cTest01() {
+let cXpos = window.event.screenX;
+let cYpos = window.event.screenY;
+document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos 
+}
 function cFunc2 () {
 cClick = 0 
 }
@@ -88,9 +93,7 @@ document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
 cClick = cClick + 1
 cDraw()            
 }" onmouseover="{
-let cXpos = window.event.screenX;
-let cYpos = window.event.screenY;
-document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos
+setInterval(cTest01, 1000)
 }"></canvas>
 <script> 
    let myCanvas=document.getElementById('myCoolTag');
