@@ -88,10 +88,11 @@ document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
 cClick = cClick + 1
 cDraw()            
 }" onmouseover="{
+let cDiv03 = document.getElementById('cDiv03').innerHTML
 setInterval(
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
-document.getElementById('cDiv03').innerHTML = cXpos + ', ' + cYpos 
+cDiv03 = cXpos + ', ' + cYpos 
 , 1000)
 }"></canvas>
 <script> 
