@@ -2,24 +2,59 @@
 <h2>version 0.0.1 |t2a09-local-storage-name by cooper. Instructions:</h2>
 
 <body onload="{
-   cStorage = localStorage.getItem('cStoredText')
-   if(cStorage  != null){
-      document.getElementById('cText01').value = cStorage 
+   cStorage1 = localStorage.getItem('cStoredText0')
+   if(cStorage0  != null){
+      document.getElementById('cText01').value = cStorage0
     }
+      cStorage1 = localStorage.getItem('cStoredText1')
+   if(cStorage1  != null){
+      document.getElementById('cText02').value = cStorage1 
+    }
+         cStorage2 = localStorage.getItem('cStoredText2')
+   if(cStorage2  != null){
+      document.getElementById('cText02').value = cStorage2 
+    }
+          cStorage3 = localStorage.getItem('cStoredText3')
+   if(cStorage3  != null){
+      document.getElementById('cText02').value = cStorage3 
+    }         
+          cStorage4 = localStorage.getItem('cStoredText4')
+   if(cStorage4  != null){
+      document.getElementById('cText02').value = cStorage4 
+    }          
+          cStorage5 = localStorage.getItem('cStoredText5')
+   if(cStorage5  != null){
+      document.getElementById('cText02').value = cStorage5 
+    }          
+          cStorage6 = localStorage.getItem('cStoredText6')
+   if(cStorage6  != null){
+      document.getElementById('cText02').value = cStorage6 
+    }          
 }">
 
 <body onunload="{
    localstorage.setItem('cStoredText',document.getElementById('cText01').value)
-}">   
+   localstorage.setItem('cStoredText2',document.getElementById('cText02').value)
+                }">   
 
 Text example: <input id="cText01" type=text size=70 value="" placeholder="Write here to store"><br>
 
 <input type="button" value="Store Text" onClick="{
-   localStorage.setItem('cStoredText', document.getElementById('cText01').value)
+   localStorage.setItem('cStoredText0', document.getElementById('cText01').value)
    alert(document.getElementById('cText01').value + ' \nHas been stored')
    document.getElementById('cText01').value = ''
 }">
 
 <input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('cText01').value = localStorage.getItem('cStoredText')
+   document.getElementById('cText01').value = localStorage.getItem('cStoredText0')
 }"> 
+Faux Array Test: <input type=text id="cText02" value="" placeholder="write here to store"><br>
+<input type=button value="store text" onclick="{
+   localStorage.setItem('cStoredText' + document.getElementById('cFarray').value, document.getElementById('cText02').value)
+   alert(document.getElementById('cText02').value + ' \nHas been stored')
+   document.getElementById('cText02').value = ''                                                                                              
+}">
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('cText02').value = localStorage.getItem('cStoredText' + document.getElementById('cFarray').value)
+}"><br>
+<input type="number" id="cFarray" min="1" max="5"> Faux array test<br>
