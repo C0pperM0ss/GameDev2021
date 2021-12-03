@@ -47,7 +47,7 @@ Text example: <input id="cText01" type=text size=70 value="" placeholder="Write 
 
 <input type="button" value="Retrieve Text" onClick="{
    document.getElementById('cText01').value = localStorage.getItem('cStoredText0')
-}"> 
+}"><br>
 Faux Array Test: <input type=text id="cText02" value="" placeholder="write here to store"><br>
 <input type=button value="store text" onclick="{
    localStorage.setItem('cStoredText' + document.getElementById('cFarray').value, document.getElementById('cText02').value)
