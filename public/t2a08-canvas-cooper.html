@@ -45,9 +45,9 @@ if (cClick == 1) {
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 380
+let cYpos2 = cYpos - 420
 myContext.beginPath();
-myContext.lineWidth = 1;
+myContext.lineWidth = document.getElementById('cRange').value;
 myContext.moveTo(cXpos2,cYpos2);
 document.getElementById('cDiv01').innerHTML = cXpos2 + ', ' + cYpos2
 }
@@ -55,7 +55,7 @@ if (cClick == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 380
+let cYpos4 = cYpos3 - 420
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
@@ -116,7 +116,7 @@ document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
-<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #fffff;" onclick="{                                                                          
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000; background-color: white;" onclick="{                                                                          
 cClick = cClick + 1
 cDraw()            
 }" onmouseover="{
