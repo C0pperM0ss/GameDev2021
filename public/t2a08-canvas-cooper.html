@@ -10,7 +10,7 @@ You use loops and variables to make fast fancy drawings first position<div id="c
 <input type=radio name="cRad" id="cRad02"><font color=green>Green</font><br>
 <input type=radio name="cRad" id="cRad03"><font color=blue>Blue</font><br>
 <input type=radio name="cRad" id="cRad04"><font color=yellow>yellow</font><br>
-<input type="range" min="1" max="100" value="50" id="cRange" onchange="{                                                                                       
+<input type="range" min="1" max="100" value="1" id="cRange" onchange="{                                                                                       
 cChange01 ()                                                                              
 }"> 
 <div id="cDiv06">...</div>
@@ -45,7 +45,7 @@ if (cClick == 1) {
 let cXpos = window.event.screenX;
 let cYpos = window.event.screenY;
 let cXpos2 = cXpos - 10   
-let cYpos2 = cYpos - 290
+let cYpos2 = cYpos - 250
 myContext.beginPath();
 myContext.lineWidth = document.getElementById('cRange').value;
 myContext.moveTo(cXpos2,cYpos2);
@@ -55,7 +55,7 @@ if (cClick == 2) {
 let cXpos3 = window.event.screenX;
 let cYpos3 = window.event.screenY;
 let cXpos4 = cXpos3 - 10   
-let cYpos4 = cYpos3 - 290
+let cYpos4 = cYpos3 - 250
 myContext.lineTo(cXpos4,cYpos4);     
 myContext.stroke();
 document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
