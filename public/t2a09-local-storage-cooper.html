@@ -1,0 +1,25 @@
+
+<h2>version 0.0.1 |t2a09-local-storage-name by cooper. Instructions:</h2>
+
+<body onload="{
+   cStorage = localStorage.getItem('cStoredText')
+   if(cStorage  != null){
+      document.getElementById('cText01').value = cStorage 
+    }
+}">
+
+<body onunload="{
+   localstorage.setItem('cStoredText',document.getElementById('cText01').value)
+}">   
+
+Text example: <input id="cText01" type=text size=70 value="" placeholder="Write here to store"><br>
+
+<input type="button" value="Store Text" onClick="{
+   localStorage.setItem('cStoredText', document.getElementById('cText01').value)
+   alert(document.getElementById('cText01').value + ' \nHas been stored')
+   document.getElementById('cText01').value = ''
+}">
+
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('cText01').value = localStorage.getItem('cStoredText')
+}"> 
