@@ -10,19 +10,36 @@ You use loops and variables to make fast fancy drawings first position<div id="c
 <input type=radio name="cRad" id="cRad02"><font color=green>Green</font><br>
 <input type=radio name="cRad" id="cRad03"><font color=blue>Blue</font><br>
 <input type=radio name="cRad" id="cRad04"><font color=yellow>yellow</font><br>
-<div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-</div>
-
+<input type="range" min="1" max="100" value="50" id="cRange" onchange="{                                                                                       
+cChange01 ()                                                                              
+}"> 
+<div id="cDiv06">...</div>
 
 <script>
 let cClick = 0
+function cChange01() {
+let cVal = document.getElementById('cRange').value  
+document.getElementById('cDiv06').innerHTML = cVal
+}
+
 function cFunc2 () {
 cClick = 0 
 }
 function cDraw() {  
 if (cClick == 2) {
 setTimeout(cFunc2, 100)
+}
+if (document.getElementById('cRad01').checked == true) {
+myContext.strokeStyle = 'red'   
+}
+if (document.getElementById('cRad02').checked == true) {
+myContext.strokeStyle = 'green'   
+}
+if (document.getElementById('cRad03').checked == true) {
+myContext.strokeStyle = 'blue'   
+}
+if (document.getElementById('cRad04').checked == true) {
+myContext.strokeStyle = 'yellow'   
 }
 if (cClick == 1) { 
 let cXpos = window.event.screenX;
@@ -99,7 +116,7 @@ document.getElementById('cDiv02').innerHTML = cXpos4 + ', ' + cYpos4
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
-<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;" onclick="{                                                                          
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #fffff;" onclick="{                                                                          
 cClick = cClick + 1
 cDraw()            
 }" onmouseover="{
