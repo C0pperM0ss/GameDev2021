@@ -29,7 +29,8 @@
           cStorage6 = localStorage.getItem('cStoredText6')
    if(cStorage6  != null){
       document.getElementById('cText02').value = cStorage6 
-    }          
+    }
+   
 }">
 
 <body onunload="{
@@ -57,4 +58,16 @@ Faux Array Test: <input type=text id="cText02" value="" placeholder="write here 
 <input type="button" value="Retrieve Text" onClick="{
    document.getElementById('cText02').value = localStorage.getItem('cStoredText' + document.getElementById('cFarray').value)
 }"><br>
-<input type="number" id="cFarray" min="1" max="5"> Faux array test<br>
+<input type="number" value="1" id="cFarray" min="1" max="5"> Faux array test<br>
+<img src="EyeOfTheUni.png">
+   
+
+<input type=button value="up" id="cUp" onclick="{
+                                                
+}"><input type=button value="Down" id="cDown" onclick="{
+   
+}"> <br> <input type=button value="Left" id="cLeft" onclick="{
+
+}"><input type=button value="Right" id="cRight" onclick="{
+   
+}">
