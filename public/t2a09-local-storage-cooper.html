@@ -59,32 +59,22 @@ Faux Array Test: <input type=text id="cText02" value="" placeholder="write here 
    document.getElementById('cText02').value = localStorage.getItem('cStoredText' + document.getElementById('cFarray').value)
 }"><br>
 <input type="number" value="1" id="cFarray" min="1" max="5"> Faux array test<br>
-<img src="EyeOfTheUni.png" style="height:50%;length:50%; position:relative;" id="cImage"><br>
-<script>
-function cUp(){
-let Result = document.getElementById('cImage').style.top - 10
-document.getElementById('cImage').style.top = Result
-}
-function cDown() {
-let Result01 = document.getElementById('cImage').style.top + 10
-document.getElementById('cImage').style.top = Result01
-}
-function cLeft() {
-let Result02 = document.getElementById('cImage').style.left - 10  
-document.getElementById('cImage').style.left = Result02             
-}
-function cRight(){
-let Result03 = document.getElementById('cImage').style.left + 10
-document.getElementById('cImage').style.left = Result03
-}
-</script>
+<img src="EyeOfTheUni.png" style="height:50%;length:50%; position:absolute;" id="cImage"><br>
 
 <input type=button value="up" id="cUp" onclick="{
-cUp()
+let cImg = parseInt(document.getElementById('cImage').style.top)
+let result = cImg - 10
+document.getElementById('cImage').style.top = result
 }"><input type=button value="Down" id="cDown" onclick="{
-cDown()
+let cImg = parseInt(document.getElementById('cImage').style.top)
+let result = cImg + 10
+document.getElementById('cImage').style.top = result
 }"> <br> <input type=button value="Left" id="cLeft" onclick="{
-cLeft()
+let cImg = parseInt(document.getElementById('cImage').style.left)
+let result = cImg - 10
+document.getElementById('cImage').style.left = result
 }"><input type=button value="Right" id="cRight" onclick="{
-cRight()  
+let cImg = parseInt(document.getElementById('cImage').style.left)
+let result = cImg + 10
+document.getElementById('cImage').style.left = result
 }">
