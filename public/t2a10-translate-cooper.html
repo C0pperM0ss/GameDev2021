@@ -21,9 +21,10 @@
    responsiveVoice.speak(document.getElementById('google_translate_element').innerText, myVoice, {pitch: 1, rate: 1, volume : 1})                                              
 }"><br><br>
 
-<input type=text id="cText01" value="really gamer">
+<input type=text id="cText01" value="really gamer" onchange="{document.getElementById('cDiv').innerHTML = document.getElementById('cText01').value}">
+<div id="cDiv">...</div>
 
 <input type=button value="remy, speak" onclick="{
-let cVoice = 'Russian Male'
-responsiveVoice.speak(document.getElementById('cText01').value, cVoice, { pitch: 1, rate: 1, volume: 1})
+let cVoice = 'Russian Female'
+responsiveVoice.speak(document.getElementById('cDiv').innerHTML, cVoice, { pitch: 1, rate: 1, volume: 1})
 }">
