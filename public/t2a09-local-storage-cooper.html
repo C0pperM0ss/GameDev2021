@@ -59,15 +59,15 @@ Faux Array Test: <input type=text id="cText02" value="" placeholder="write here 
    document.getElementById('cText02').value = localStorage.getItem('cStoredText' + document.getElementById('cFarray').value)
 }"><br>
 <input type="number" value="1" id="cFarray" min="1" max="5"> Faux array test<br>
-<img src="EyeOfTheUni.png" style="height:50%;width:50%;"id="cImage">
+<img src="EyeOfTheUni.png" style="height:50%;width:50%;"id="cImage"><br>
    
 
 <input type=button value="up" id="cUp" onclick="{
-                                                
+document.getElementById('cImage').style.top = document.getElementById('cImage').style.top - 10      
 }"><input type=button value="Down" id="cDown" onclick="{
-   
+document.getElementById('cImage').style.top = document.getElementById('cImage').style.top + 10   
 }"> <br> <input type=button value="Left" id="cLeft" onclick="{
-
+document.getElementById('cImage').style.left = document.getElementById('cImage').style.left + 10   
 }"><input type=button value="Right" id="cRight" onclick="{
-   
+document.getElementById('cImage').style.left = document.getElementById('cImage').style.left - 10   
 }">
