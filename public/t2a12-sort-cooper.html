@@ -17,7 +17,7 @@
 }">
 
 
-<input type=button value="Sort" onclick="{
+<input type=button value="Sort (lest to greatest)" onclick="{
   let myTemp = 0
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
      myCards.sort(function(a, b){return a - b});
@@ -29,7 +29,30 @@
   }
    document.getElementById('myDiv01').innerHTML = cTemp
 }">
-
+<input type=button value="Sort (greatest to least)" onclick="{
+  let myTemp = 0
+  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myCards.sort(function(a, b){return b - a});
+     
+  }
+      let cTemp = ''
+  for ( let cLoop = 0;   cLoop < myMax;  cLoop++){
+     cTemp += cLoop + ' = '+ myCards[cLoop] + '<br>'
+  }
+   document.getElementById('myDiv01').innerHTML = cTemp
+}">
+<input type=button value="Sort (greatest to least)" onclick="{
+  let myTemp = 0
+  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myCards.sort(function(a, b){return 0.5 - Math.random()});
+     
+  }
+      let cTemp = ''
+  for ( let cLoop = 0;   cLoop < myMax;  cLoop++){
+     cTemp += cLoop + ' = '+ myCards[cLoop] + '<br>'
+  }
+   document.getElementById('myDiv01').innerHTML = cTemp
+}">
 <div id="myDiv01"></div>
 
 
