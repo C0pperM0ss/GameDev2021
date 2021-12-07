@@ -1,4 +1,13 @@
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg" onload="{
+                  cTop = localStorage.getItem('cTop01')
+   if(cTop != null){
+      document.getElementById('myImg01').style.top = cTop
+              }
+                cLeft = localStorage.getItem('cLeft01')
+   if(cLeft != null){
+      document.getElementById('myImg01').style.left = cLeft
+              }
+}">
 
 <h1 align=center>t2a11 Game Template by Cooper</h1>
 <br><br><br><br>
@@ -60,16 +69,20 @@ function myCheckHit(){
 <input type=button value="Image Right"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
-}">
+localStorage.setItem('cLeft01', document.getElementById('cImage').style.left)
+ }">
 <input type=button value="Image Left"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
   myCheckHit()     // checks for all collisions
+  localStorage.setItem('cLeft01', document.getElementById('cImage').style.left)
 }">
 <input type=button value="Image Up"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
   myCheckHit()     // checks for all collisions
-}">
+localStorage.setItem('cTop01', document.getElementById('cImage').style.top)
+  }">
 <input type=button value="Image Down"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
+localStorage.setItem('cTop01', document.getElementById('cImage').style.top)  
 }">
