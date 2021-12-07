@@ -30,7 +30,14 @@
    if(cStorage6  != null){
       document.getElementById('cText02').value = cStorage6 
     }
-   
+            cTop = localStorage.getItem('cTop01')
+   if(cTop != null){
+      document.getElementById('cImage').style.Top = cTop
+              }
+                cLeft = localStorage.getItem('cLeft01')
+   if(cLeft != null){
+      document.getElementById('cImage').style.left = cLeft
+              }
 }">
 
 <body onunload="{
@@ -63,10 +70,14 @@ Faux Array Test: <input type=text id="cText02" value="" placeholder="write here 
 
 <input type=button value="up" id="cUp" onclick="{
 document.getElementById('cImage').style.top = parseInt(document.getElementById('cImage').style.top) - 10 + 'px'
+localStorage.setItem('cTop01', document.getElementById('cImage').style.top)
 }"><input type=button value="Down" id="cDown" onclick="{
-document.getElementById('cImagec').style.top = parseInt(document.getElementById('cImage').style.top) + 10 + 'px'
+document.getElementById('cImage').style.top = parseInt(document.getElementById('cImage').style.top) + 10 + 'px'
+localStorage.setItem('cTop01', document.getElementById('cImage').style.top)
 }"> <br> <input type=button value="Left" id="cLeft" onclick="{
 document.getElementById('cImage').style.left = parseInt(document.getElementById('cImage').style.left) - 10 + 'px'
+localStorage.setItem('cLeft01', document.getElementById('cImage').style.left)
 }"><input type=button value="Right" id="cRight" onclick="{
 document.getElementById('cImage').style.left = parseInt(document.getElementById('cImage').style.left) + 10 + 'px'
+localStorage.setItem('cLeft01', document.getElementById('cImage').style.left)
 }">
