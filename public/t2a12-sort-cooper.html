@@ -8,7 +8,9 @@
    let myMax = 3      // 52 when working
    let myCards = new Array(myMax)  
 </script>
-
+<input type=number id="cNum" value="1" onchange="{
+myMax = document.getElementById('cNum').value                                               
+}">
 <input type=button value="Set Random" onclick="{
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
      myCards[myLoop] = Math.floor(Math.random()*10)
