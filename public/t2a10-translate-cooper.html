@@ -1,7 +1,10 @@
 <h3 align=center> t2a10-translate-cooper version 0.0.1</h3>
 <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script> let cSound1 = new Audio('Timber.mp3') </script>
 
+
+<input type=button value="click here to hear an amazing song" onClick="{cSound1.play()}"><br>
 <script>
     function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,de,ru', layout:google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
