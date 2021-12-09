@@ -40,8 +40,7 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')
-      //document.getElementById('myImg01').style.left = '20px'
+     document.getElementById('myImg01').style.left = document.getElementById('myImg01').style.left - 10 + 'px'
    }
 
    // more if statements here
@@ -66,22 +65,22 @@ function myCheckHit(){
 }">
 
 
-<input type=button value="Image Right"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input id="cRight" type=button value="Image Right"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 localStorage.setItem('cLeft01', document.getElementById('myImg01').style.left)
  }">
-<input type=button value="Image Left"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input id="cLeft" type=button value="Image Left"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
   myCheckHit()     // checks for all collisions
   localStorage.setItem('cLeft01', document.getElementById('myImg01').style.left)
 }">
-<input type=button value="Image Up"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input id="cUp" type=button value="Image Up"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
   myCheckHit()     // checks for all collisions
 localStorage.setItem('cTop01', document.getElementById('myImg01').style.top)
   }">
-<input type=button value="Image Down"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input id="cDown" type=button value="Image Down"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 localStorage.setItem('cTop01', document.getElementById('myImg01').style.top)  
