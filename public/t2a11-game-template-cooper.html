@@ -32,7 +32,7 @@ function cHitLeft(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if(left1   <=  right2 ){
+   if(left1   ==  right2){
        return true
    }
 }
@@ -45,7 +45,7 @@ function cHitRight(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if (right1  >=  left2  ) {    	   
+   if (right1  ==  left2  ) {    	   
        return true
    }
 }
@@ -58,7 +58,7 @@ function cHitTop(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if(top1    <=  bottom2){
+   if(top1    ==  bottom2){
        return true
    }
 }
@@ -71,7 +71,7 @@ function cHitBottom(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if(bottom1 >=  top2   ) {
+   if(bottom1 ==  top2   ) {
        return true
    }
 }
