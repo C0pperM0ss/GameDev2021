@@ -73,16 +73,16 @@ function cHitBottom(my1,my2){
    }
 }
 function myCheckHit(){
-   if ( myHitLeft('myImg01','myImg02') ){
+   if ( cHitLeft('myImg01','myImg02') ){
      document.getElementById('myImg01').style.left = document.getElementById('myImg01').style.left + 10
    }
-if ( myHitRight('myImg01','myImg02') ){
+if ( cHitRight('myImg01','myImg02') ){
      document.getElementById('myImg01').style.left = document.getElementById('myImg01').style.left - 10
    }
-if ( myHitTop('myImg01','myImg02') ){
+if ( cHitTop('myImg01','myImg02') ){
      document.getElementById('myImg01').style.top = document.getElementById('myImg01').style.left + 10
    }
-if ( myHitBottom('myImg01','myImg02') ){
+if ( cHitBottom('myImg01','myImg02') ){
      document.getElementById('myImg01').style.top = document.getElementById('myImg01').style.left - 10
    }
    // more if statements here
