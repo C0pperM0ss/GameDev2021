@@ -1,6 +1,6 @@
 <script>
    let cInterval
- 
+   let cInterval2
 function cIsOnScreen(){
    if (parseInt(document.getElementById('cImg01').style.left) > 400) {
      document.getElementById('cImg01').style.left = '400px'
@@ -34,8 +34,8 @@ function cIsOnScreen(){
       } ,20)
    }
          if (cKey == 'w') {
-      clearInterval(cInterval)
-      cInterval = setInterval(function(){
+      clearInterval(cInterval2)
+      cInterval2 = setInterval(function(){
    
          document.getElementById('cImg01').style.top = 
              parseInt(document.getElementById('cImg01').style.top) - 3
@@ -43,8 +43,8 @@ function cIsOnScreen(){
       } ,20)
    }
            if (cKey == 's') {
-      clearInterval(cInterval)
-      cInterval = setInterval(function(){
+      clearInterval(cInterval2)
+      cInterval2 = setInterval(function(){
    
          document.getElementById('cImg01').style.top = 
              parseInt(document.getElementById('cImg01').style.top) + 3
@@ -66,13 +66,13 @@ function cIsOnScreen(){
       } ,20)
    }
          if (cKey == 'w') {
-      clearInterval(cInterval)
-      cInterval = setInterval(function(){
+      clearInterval(cInterval2)
+      cInterval2 = setInterval(function(){
       } ,20)
    }
            if (cKey == 's') {
-      clearInterval(cInterval)
-      cInterval = setInterval(function(){
+      clearInterval(cInterval2)
+      cInterval2 = setInterval(function(){
       } ,20)
    }
    }">
