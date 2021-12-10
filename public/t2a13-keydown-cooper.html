@@ -1,0 +1,31 @@
+<script>
+   let cInterval
+ 
+function cIsOnScreen(){
+   if (parseInt(document.getElementById('cDiv01').style.left) > 400) {
+     document.getElementById('cDiv01').style.left = '397px'
+   }
+}
+
+</script>
+
+<body onkeydown="{
+     let cKey = event.key
+ //  let cKey = String.toLowerCase(event.key)
+   if (cKey == 'd') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+   
+         document.getElementById('cDiv01').style.left = 
+             parseInt(document.getElementById('cDiv01').style.left) + 3
+         cIsOnScreen()
+      } ,20)
+   }
+}">
+
+<h1 align=center>t1a13-onkeydown-fred</h1>
+Get WASD working, what about a second object controlled by arrows or IJKL<br>
+
+<div id="cDiv01" style="position:absolute; left:200; top:200; " >Fred</div>
+
+</body>
