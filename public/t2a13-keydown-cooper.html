@@ -23,6 +23,33 @@ function cIsOnScreen(){
              parseInt(document.getElementById('cImg01').style.left) + 3
          cIsOnScreen()
       } ,20)
+  }
+      if (cKey == 'a') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+   
+         document.getElementById('cImg01').style.left = 
+             parseInt(document.getElementById('cImg01').style.left) - 3
+         cIsOnScreen()
+      } ,20)
+   }
+         if (cKey == 'w') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+   
+         document.getElementById('cImg01').style.top = 
+             parseInt(document.getElementById('cImg01').style.top) - 3
+         cIsOnScreen()
+      } ,20)
+   }
+           if (cKey == 's') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+   
+         document.getElementById('cImg01').style.top = 
+             parseInt(document.getElementById('cImg01').style.top) + 3
+         cIsOnScreen()
+      } ,20)
    }
    }"
     onkeyup="{
@@ -33,6 +60,21 @@ function cIsOnScreen(){
             cInterval = setInterval(function(){
       } ,20)
     }
+         if (cKey == 'a') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+      } ,20)
+   }
+         if (cKey == 'w') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+      } ,20)
+   }
+           if (cKey == 's') {
+      clearInterval(cInterval)
+      cInterval = setInterval(function(){
+      } ,20)
+   }
    }">
 
 <h1 align=center>t1a13-onkeydown-cooper| version 0.0.1</h1>
