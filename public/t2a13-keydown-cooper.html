@@ -13,9 +13,14 @@ function cIsOnScreen(){
 
 
 <body onkeydown="{
+     let cCh = document.getElementById('cChk').checked
      let cKey = event.key
  //  let cKey = String.toLowerCase(event.key)
    if (cKey == 'd') {
+     if(cCh == false){
+           document.getElementById('cImg01').style.left =  parseInt(document.getElementById('cImg01').style.left) + 10 
+       }
+     if(cCh == true) {
       clearInterval(cInterval)
       cInterval = setInterval(function(){
    
@@ -23,8 +28,12 @@ function cIsOnScreen(){
              parseInt(document.getElementById('cImg01').style.left) + 3
          cIsOnScreen()
       } ,20)
-  }
+  }}
       if (cKey == 'a') {
+       if(cCh == false){
+           document.getElementById('cImg01').style.left =  parseInt(document.getElementById('cImg01').style.left) - 10 
+       }
+      if(cCh == true) {
       clearInterval(cInterval)
       cInterval = setInterval(function(){
    
@@ -32,8 +41,12 @@ function cIsOnScreen(){
              parseInt(document.getElementById('cImg01').style.left) - 3
          cIsOnScreen()
       } ,20)
-   }
+   }}
          if (cKey == 'w') {
+       if(cCh == false){
+           document.getElementById('cImg01').style.top =  parseInt(document.getElementById('cImg01').style.top) - 10 
+       }
+      if(cCh == true) {
       clearInterval(cInterval2)
       cInterval2 = setInterval(function(){
    
@@ -41,8 +54,12 @@ function cIsOnScreen(){
              parseInt(document.getElementById('cImg01').style.top) - 3
          cIsOnScreen()
       } ,20)
-   }
+   }}
            if (cKey == 's') {
+       if(cCh == false){
+           document.getElementById('cImg01').style.top =  parseInt(document.getElementById('cImg01').style.top) + 10 
+       }
+       if(cCh == true) {
       clearInterval(cInterval2)
       cInterval2 = setInterval(function(){
    
@@ -50,7 +67,7 @@ function cIsOnScreen(){
              parseInt(document.getElementById('cImg01').style.top) + 3
          cIsOnScreen()
       } ,20)
-   }
+   }}
    }"
     onkeyup="{
      let cKey = event.key
