@@ -7,6 +7,14 @@
    if(cLeft != null){
       document.getElementById('myImg01').style.left = cLeft
               }
+                   cTop2 = localStorage.getItem('cTop02')
+   if(cTop2 != null){
+      document.getElementById('myImg02').style.top = cTop2
+              }
+                cLeft2 = localStorage.getItem('cLeft02')
+   if(cLeft2 != null){
+      document.getElementById('myImg02').style.left = cLeft2
+              }
 }">
 <input value="reset" type=button onclick="{
 document.getElementById('myImg01').style.left = '0px'
@@ -129,4 +137,24 @@ localStorage.setItem('cTop01', document.getElementById('myImg01').style.top)
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 localStorage.setItem('cTop01', document.getElementById('myImg01').style.top)  
+}">
+<input id="cRight" type=button value="Image Right 2"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+localStorage.setItem('cLeft02', document.getElementById('myImg02').style.left)
+ }">
+<input id="cLeft" type=button value="Image Left 2"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) - 10 + 'px'
+  myCheckHit()     // checks for all collisions
+  localStorage.setItem('cLeft02', document.getElementById('myImg02').style.left)
+}">
+<input id="cUp" type=button value="Image Up 2"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) - 10 + 'px'
+  myCheckHit()     // checks for all collisions
+localStorage.setItem('cTop02', document.getElementById('myImg02').style.top)
+  }">
+<input id="cDown" type=button value="Image Down 2"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+localStorage.setItem('cTop02', document.getElementById('myImg02').style.top)  
 }">
