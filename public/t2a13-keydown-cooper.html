@@ -3,7 +3,7 @@
  
 function cIsOnScreen(){
    if (parseInt(document.getElementById('cImg01').style.left) > 400) {
-     document.getElementById('cImg01').style.left = '397px'
+     document.getElementById('cImg01').style.left = '400px'
    }
 }
 
@@ -24,7 +24,14 @@ function cIsOnScreen(){
          cIsOnScreen()
       } ,20)
    }
-}">
+   }"
+    onkeyup="{
+     let cKey = event.key
+ //  let cKey = String.toLowerCase(event.key)
+   if (cKey == 'd') {
+      clearInterval(cInterval)
+   }
+>
 
 <h1 align=center>t1a13-onkeydown-fred</h1>
 Get WASD working, what about a second object controlled by arrows or IJKL<br>
