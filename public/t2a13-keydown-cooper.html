@@ -1,6 +1,8 @@
 <script>
    let cInterval
    let cInterval2
+    let cInterval3
+   let cInterval4
 function cIsOnScreen(){
    if (parseInt(document.getElementById('cImg01').style.left) > 400) {
      document.getElementById('cImg01').style.left = '400px'
@@ -68,6 +70,58 @@ function cIsOnScreen(){
          cIsOnScreen()
       } ,20)
    }}
+   if (cKey == 'l') {
+     if(cCh == false){
+           document.getElementById('cImg02').style.left =  parseInt(document.getElementById('cImg02').style.left) + 10 
+       }
+     if(cCh == true) {
+      clearInterval(cInterval3)
+      cInterval3 = setInterval(function(){
+   
+         document.getElementById('cImg02').style.left = 
+             parseInt(document.getElementById('cImg02').style.left) + 3
+         cIsOnScreen()
+      } ,20)
+  }}
+      if (cKey == 'j') {
+       if(cCh == false){
+           document.getElementById('cImg02').style.left =  parseInt(document.getElementById('cImg02').style.left) - 10 
+       }
+      if(cCh == true) {
+      clearInterval(cInterval3)
+      cInterval3 = setInterval(function(){
+   
+         document.getElementById('cImg02').style.left = 
+             parseInt(document.getElementById('cImg02').style.left) - 3
+         cIsOnScreen()
+      } ,20)
+   }}
+         if (cKey == 'i') {
+       if(cCh == false){
+           document.getElementById('cImg02').style.top =  parseInt(document.getElementById('cImg02').style.top) - 10 
+       }
+      if(cCh == true) {
+      clearInterval(cInterval4)
+      cInterval24 = setInterval(function(){
+   
+         document.getElementById('cImg02').style.top = 
+             parseInt(document.getElementById('cImg02').style.top) - 3
+         cIsOnScreen()
+      } ,20)
+   }}
+           if (cKey == 's') {
+       if(cCh == false){
+           document.getElementById('cImg02').style.top =  parseInt(document.getElementById('cImg02').style.top) + 10 
+       }
+       if(cCh == true) {
+      clearInterval(cInterval4)
+      cInterval4 = setInterval(function(){
+   
+         document.getElementById('cImg02').style.top = 
+             parseInt(document.getElementById('cImg02').style.top) + 3
+         cIsOnScreen()
+      } ,20)
+   }}
    }"
     onkeyup="{
      let cKey = event.key
@@ -92,11 +146,31 @@ function cIsOnScreen(){
       cInterval2 = setInterval(function(){
       } ,20)
    }
+      if (cKey == 'l') {
+      clearInterval(cInterval3)
+            cInterval3 = setInterval(function(){
+      } ,20)
+    }
+         if (cKey == 'j') {
+      clearInterval(cInterval3)
+      cInterval3 = setInterval(function(){
+      } ,20)
+   }
+         if (cKey == 'i') {
+      clearInterval(cInterval4)
+      cInterval4 = setInterval(function(){
+      } ,20)
+   }
+           if (cKey == 'k') {
+      clearInterval(cInterval4)
+      cInterval4 = setInterval(function(){
+      } ,20)
+   }
    }">
 
 <h1 align=center>t1a13-onkeydown-cooper| version 0.0.2</h1>
 Get WASD working, what about a second object controlled by arrows or IJKL<br>
 
 <img src="ronin.PNG" id="cImg01" style="position:absolute; left:200; top:200; ">
-
+<img src="ronin.PNG" id="cImg02" style="position:absolute; left:600; top:200; ">
 </body>
