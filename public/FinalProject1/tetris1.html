@@ -1,0 +1,25 @@
+<body id="cBody" onload="{
+let cRan = Math.floor(Math.random() * 5) + 1;
+if(cRan == 1){
+document.getElementById('cBody').style.background = 'blue'
+}
+if(cRan == 2){
+document.getElementById('cBody').style.background = 'red'
+}
+if(cRan == 3){
+document.getElementById('cBody').style.background = 'yellow'
+document.getElementById('cHome').style.color = 'black'
+}
+if(cRan == 4){
+document.getElementById('cBody').style.background = 'purple'
+}
+if(cRan == 5){
+document.getElementById('cBody').style.background = 'green'
+}
+}">
+
+<h3 style="color:red; position:absolute; top:10px; left:50%; border-style:dotted; border-width:2px; border-color:black; background-color:white;">Tetris</h3>
+<p style="position:absolute; top:0px; left:0px;"><a id="cHome" style="color:white;text-decoration: none;" href="index.html">Home</a></p>
+<table style="border-style:solid; border-color:black; border-width:4px; background-color:white; position:absolute; top:200px; left:44%; height:500px; width:250px;">
+<tr><td></td></tr>
+</table>

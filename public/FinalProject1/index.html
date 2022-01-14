@@ -1,0 +1,51 @@
+<script>
+let cGlobalX = 0
+let cClock
+
+function cGame() {
+if (document.getElementById('cRad01').checked == true) {
+window.open("tetris1.html");
+window.close();
+}
+if (document.getElementById('cRad02').checked == true) {
+window.open("tetris5.html");
+window.close();
+}
+if (document.getElementById('cRad03').checked == true) {
+window.open("tetris10.html");
+window.close();
+}
+if (document.getElementById('cRad04').checked == true) {
+window.open("tetris15.html");
+window.close();
+}
+}
+
+</script>
+<body id="cBody" style="background-repeat:repeat; backgroundsize:100%; " background="assets/TetrisP.png" onload="{
+clearInterval(cClock)
+let cTemp = '100px 0px'
+cClock = setInterval(function(){
+	cGlobalX -= 1
+	cTemp = cGlobalX + 'px 0px'
+	document.getElementById('cBody').style.backgroundPosition = cTemp
+}, 10)
+}">
+<h3 style="font-family:'monaco'; color:red; position:absolute; top:1px; left:50%;" align=center> Final Project</h3><br>
+<h2 style="font-family:'monaco'; color:blue; border-style:solid; border-width:2px; border-color:green; position:absolute; top:125px; left:50%; background-color:yellow"> Tetris</h2>
+<table style="position:absolute; top:200; left:43%; border-style:solid; border-color:purple; border-width:3px; background-color:lightblue;">
+<tr><td>Please select a difficulty setting for your game </td></tr>
+<tr><td><input type=radio name="cRad" id="cRad01">Level 1</td></tr>
+<tr><td><input type=radio name="cRad" id="cRad02">Level 5</td></tr>
+<tr><td><input type=radio name="cRad" id="cRad03">Level 10</td></tr>
+<tr><td><input type=radio name="cRad" id="cRad04">Level 15</td></tr>
+</table>
+<input type=button value="Play" style="
+padding: 12px 28px;
+position:absolute; top:350; left:50%;
+background-color:lightgreen;
+font-size:20px;
+color:darkgreen;
+" onclick="{cGame()}">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h5 align=center style="border-style:solid; border-color:red; border-width:3px; background-color:gray; color:orange;">this tetris game was created by Copper. it was created for the sole purpose as a final project for Game Dev 11, please select a difficulty setting and in game you are able to change a few other settings like controls and sound options.</h5>
+</body>

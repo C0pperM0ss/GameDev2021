@@ -1,0 +1,19 @@
+index page will be the start menu and that is where you will select your difficulty setting for the game. once you select a dificulty setting a button will show up that says "start" 
+once pressed the start button will take you to your respective page for your level and the game will start
+blocks in random order will drop down and will line up with a certain area.
+i will have to make a stop function and a function that removes or moves down all the objects in the scene to remove them from the main play area.
+i will use images the have been cut out for each and every object
+ways of making this
+create a canvas option that creates them as each block is a function turning it into a bit of a comlicated bunch but it will e the simplest way. make each object an imgae and thern delete those parts of the images when they are all grouped up
+
+turn states:
+
+LR: 4
+LL: 4
+
+ZR: 2
+ZL: 2
+
+I: 2
+
+D: 4
