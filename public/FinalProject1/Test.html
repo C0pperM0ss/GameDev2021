@@ -1,5 +1,25 @@
 <script>
 let cNum = 0 
+let cFar = 0
+let cFar1 = 0
+let cFar2 = 0
+let cFar3 = 0
+let cFar4 = 0
+let cFar5 = 0
+let cFar6 = 0
+let cFar7 = 0
+let cFar8 = 0
+let cFar9 = 0
+let cFar10 = 0
+let cFar11 = 0
+let cFar12 = 0
+let cFar13 = 0
+let cFar14 = 0
+let cFar15 = 0
+let cFar16 = 0
+let cFar17 = 0
+let cFar18 = 0
+let cFar19 = 0
 let cInterval
 let cMax = 1
 let cMax2 = 4
@@ -10,7 +30,10 @@ let cBlocNum = 0
 let cBlock = 'assets/BB.png'
 let cBleft = 200
 let cBtop = 100
-    let cNum2 = 0
+let cTS = 1
+let cCT = true
+let cCHK = 0
+    let cNum5 = 0
     let cGame = 0
     let cTest2 = 0
     let cNor = 0
@@ -20,78 +43,147 @@ let cBtop = 100
     let cHBot = false
     let cBloc2 = '1'
     let cBloc = '2'
-let cSel01 = document.getElementById('cBB01')
-let cSel02 = document.getElementById('cBB02')
-let cSel03 = document.getElementById('cBB03')
-    let cSel04 = document.getElementById('cBB04')
+let cProper = false
+let cNum1 = cNum - 3
+let cNum2 = cNum - 2
+let cNum3 = cNum - 1
+let cNum4 = cNum - 0 
+let cSel01 = document.getElementById('cNBB' + cNum1)
+let cSel02 = document.getElementById('cNBB' + cNum2)
+let cSel03 = document.getElementById('cNBB' + cNum3)
+let cSel04 = document.getElementById('cNBB' + cNum4)
 const cObj2 = []
 let cMor = 0
-    function cHitBlock(cSel, cObj) {
-        let cLeft = parseInt(cSel.style.Left)
+    function cHitBlock(cObj) {
+	const cSel0 = [cSel01, cSel02, cSel03, cSel04]
+        let cLeft = parseInt(cSel0[0].style.left)
         let cRight = cLeft + 25
-        let cTop = parseInt(cSel.style.top)
+        let cTop = parseInt(cSel0[0].style.top)
         let cBot = cTop + 25
-        let bLeft = parseInt(cObj.style.Left)
-        let bRight = cLeft + 25
+	let cLeft1 = parseInt(cSel0[1].style.left)
+        let cRight1 = cLeft1 + 25
+        let cTop1 = parseInt(cSel0[1].style.top)
+        let cBot1 = cTop1 + 25
+        let cLeft2 = parseInt(cSel0[2].style.left)
+        let cRight2 = cLeft2 + 25
+        let cTop2 = parseInt(cSel0[2].style.top)
+        let cBot2 = cTop2 + 25
+        let cLeft3 = parseInt(cSel0[3].style.left)
+        let cRight3 = cLeft3 + 25
+        let cTop3 = parseInt(cSel0[3].style.top)
+        let cBot3 = cTop3 + 25
+        let bLeft = parseInt(cObj.style.left)
+        let bRight = bLeft + 25
         let bTop = parseInt(cObj.style.top)
-        let bBot = cTop + 25
-        if (cLeft == bRight) {
-            cHLeft = true
-            alert('hit left')
-        }
-        else {
-            cHLeft = false
-        }
-        if (cRight == bLeft) {
-            cHRight = true
-            alert('hit right')
-        }
-        else {
-            cHRight = false
-        }
-        if (cTop == bBot) {
-            cHTop = true
-            alert('hit top')
-        }
-        else {
-            cHTop = false
-        }
-        if (cBot == bTop) {
-            cHBot = true
-            alert('hit bot')
-        }
-        else {
-            cHBot = false
-        }
+        let bBot = bTop + 25
+if (cObj == cSel0[0] || cObj == cSel0[1] || cObj == cSel0[2] || cObj == cSel0[3]) {
+cProper = false
+} else {
+cProper = true
+}
+let cKey = event.key
+if (cBot == bTop && cRight - 25 >= bLeft && cLeft + 25 <= bRight && cKey == 's' && cProper == true|| cBot1 == bTop && cRight1 - 25 >= bLeft && cLeft1 + 25 <= bRight && cKey == 's' && cProper == true|| cBot2 == bTop && cRight2 - 25 >= bLeft && cLeft2 + 25 <= bRight && cKey == 's' && cProper == true|| cBot3 == bTop && cRight3 - 25 >= bLeft && cLeft3 + 25 <= bRight && cKey == 's' && cProper == true) {
+          cSel01.style.top =  parseInt(cSel01.style.top) - 25 
+          cSel02.style.top =  parseInt(cSel02.style.top) - 25 
+          cSel03.style.top =  parseInt(cSel03.style.top) - 25 
+          cSel04.style.top =  parseInt(cSel04.style.top) - 25
+cCHK = cCHK + 1
+}
+if (cTop == bBot && cLeft + 25 <= bRight && cRight - 25 >= bLeft && cKey == "w" && cProper == true|| cTop1 == bBot && cLeft1 + 25 <= bRight && cRight1 - 25 >= bLeft && cKey == "w" && cProper == true|| cTop2 == bBot && cLeft2 + 25 <= bRight && cRight2 - 25 >= bLeft && cKey == "w" && cProper == true|| cTop3 == bBot && cLeft3 + 25 <= bRight && cRight3 - 25 >= bLeft && cKey == "w" && cProper == true) {
+          cSel01.style.top =  parseInt(cSel01.style.top) + 25 
+          cSel02.style.top =  parseInt(cSel02.style.top) + 25 
+          cSel03.style.top =  parseInt(cSel03.style.top) + 25 
+          cSel04.style.top =  parseInt(cSel04.style.top) + 25
+cCHK = cCHK + 1
+}
+if (cRight == bLeft && cBot - 25 >= bTop && cTop + 25 <= bBot && cKey == 'd' && cProper == true||cRight1 == bLeft && cBot1 - 25 >= bTop && cTop1 + 25 <= bBot && cKey == 'd' && cProper == true||cRight2 == bLeft && cBot2 - 25 >= bTop && cTop2 + 25 <= bBot && cKey == 'd' && cProper == true||cRight3 == bLeft && cBot3 - 25 >= bTop && cTop3 + 25 <= bBot && cKey == 'd' && cProper == true) {
+          cSel01.style.left =  parseInt(cSel01.style.left) - 25 
+          cSel02.style.left =  parseInt(cSel02.style.left) - 25 
+          cSel03.style.left =  parseInt(cSel03.style.left) - 25 
+          cSel04.style.left =  parseInt(cSel04.style.left) - 25 
+}
+if (cLeft == bRight && cBot - 25 >= bTop && cTop + 25 <= bBot && cKey == 'a' && cProper == true||cLeft1 == bRight && cBot1 - 25 >= bTop && cTop1 + 25 <= bBot && cKey == 'a' && cProper == true||cLeft2 == bRight && cBot2 - 25 >= bTop && cTop2 + 25 <= bBot && cKey == 'a' && cProper == true||cLeft3 == bRight && cBot3 - 25 >= bTop && cTop3 + 25 <= bBot && cKey == 'a' && cProper == true) {
+          cSel01.style.left =  parseInt(cSel01.style.left) + 25 
+          cSel02.style.left =  parseInt(cSel02.style.left) + 25 
+          cSel03.style.left =  parseInt(cSel03.style.left) + 25 
+          cSel04.style.left =  parseInt(cSel04.style.left) + 25 
+}
     }
-    function cAHit(cOBJ) {
-        cBloc2 = cOBJ
-        const cSel0 = [cSel01, cSel02, cSel03, cSel04]
-        cSel.forEach(cCheck)
-    }
-    function cCheck(cOBJ2) {
-    cHitBlock(cOBJ2, cBloc2)
-    }
+function cBound(cTst) {
+const cSel0 = [cSel01, cSel02, cSel03, cSel04]   
+let cKey = event.key
+if (parseInt(cTst.style.left) - 25 <= 150 && cKey == 'a') {
+          cSel0[0].style.left =  parseInt(cSel0[0].style.left) + 25 
+          cSel0[1].style.left =  parseInt(cSel0[1].style.left) + 25 
+          cSel0[2].style.left =  parseInt(cSel0[2].style.left) + 25 
+          cSel0[3].style.left =  parseInt(cSel0[3].style.left) + 25
+
+} 
+if (parseInt(cTst.style.left) + 25 >= 425 && cKey == 'd') {
+          cSel0[0].style.left =  parseInt(cSel0[0].style.left) - 25 
+          cSel0[1].style.left =  parseInt(cSel0[1].style.left) - 25 
+          cSel0[2].style.left =  parseInt(cSel0[2].style.left) - 25 
+          cSel0[3].style.left =  parseInt(cSel0[3].style.left) - 25 
+} 
+if (parseInt(cTst.style.top) + 25 == 700 && cKey == 's') {
+          cSel0[0].style.top =  parseInt(cSel0[0].style.top) - 25 
+          cSel0[1].style.top =  parseInt(cSel0[1].style.top) - 25 
+          cSel0[2].style.top =  parseInt(cSel0[2].style.top) - 25 
+          cSel0[3].style.top =  parseInt(cSel0[3].style.top) - 25 
+	cCHK = cCHK + 1
+	cObj2.forEach(cGameLog)
+	
+}
+}
+function cGameLog(cObj){
+if(cCHK - 1 == 4){
+cImgI()
+cCHK = 0
+}
+cSel01 = document.getElementById('cNBB' + cNum1)
+cSel02 = document.getElementById('cNBB' + cNum2)
+cSel03 = document.getElementById('cNBB' + cNum3)
+cSel04 = document.getElementById('cNBB' + cNum4)
+if (parseInt(cObj.style.top) == 675) {
+cFar19 = cFar19 + 1
+}
+if (cFar19 == 10) {
+cObj.remove()
+}
+}
+function cCanTurn() {
+const cSel0 = [cSel01, cSel02, cSel03, cSel04] 
+if (parseInt(cSel0[0].style.left) + 25 == 425 || parseInt(cSel0[1].style.left) + 25 == 425 || parseInt(cSel0[2].style.left) + 25 == 425 || parseInt(cSel0[3].style.left) + 25 == 425) {
+cCT = true
+} else {
+cCT = true
+}
+if (parseInt(cSel0[0].style.left) == 175 || parseInt(cSel0[1].style.left) == 175 || parseInt(cSel0[2].style.left) == 175 || parseInt(cSel0[3].style.left) == 175) {
+cCT = true
+} else {
+cCT = true
+}
+}
 function cBlox () {
 if (cBlocNum == 1) {
 cMor = 25
 cNor = 0
-cBlock = 'assets/BB.png'
-if (cNum == cNum2 - 3) {
-cBtop = '25px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 2) {
-cBtop = '50px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
+cBlock = 'assets/LLBB.png'
+if (cNum == cNum5 - 3) {
 cBtop = '75px'
-cBleft = '200px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 4) {
+if (cNum == cNum5 - 2) {
 cBtop = '100px'
-cBleft = '200px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
+cBtop = '125px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 4) {
+cBtop = '150px'
+cBleft = '300px'
 }
 }
 
@@ -99,43 +191,43 @@ if (cBlocNum == 2) {
 cNor = -25
 cMor = 50
 cBlock = 'assets/YB.png'
-if (cNum == cNum2 - 3) {
-cBtop = '100px'
-cBleft = '200px'
+if (cNum == cNum5 - 3) {
+cBtop = '150px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 2) {
-cBtop = '75px'
-cBleft = '200px'
+if (cNum == cNum5 - 2) {
+cBtop = '125px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 1) {
-cBtop = '100px'
-cBleft = '175px'
+if (cNum == cNum5 - 1) {
+cBtop = '150px'
+cBleft = '275px'
 }
-if (cNum == cNum2 - 4) {
-cBtop = '75px'
-cBleft = '175px'
+if (cNum == cNum5 - 4) {
+cBtop = '125px'
+cBleft = '275px'
 }
 }
 
 if (cBlocNum == 3) {
 cNor = -25
 cMor = 50
-cBlock = 'assets/OB.png'
-if (cNum == cNum2 - 3) {
-cBtop = '25px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 2) {
-cBtop = '50px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
+cBlock = 'assets/PB.png'
+if (cNum == cNum5 - 3) {
 cBtop = '75px'
-cBleft = '200px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 4) {
-cBtop = '50px'
-cBleft = '175px'
+if (cNum == cNum5 - 2) {
+cBtop = '100px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
+cBtop = '100px'
+cBleft = '325px'
+}
+if (cNum == cNum5 - 4) {
+cBtop = '100px'
+cBleft = '275px'
 }
 }
 
@@ -143,91 +235,299 @@ if (cBlocNum == 4) {
 cNor = -25
 cMor = 50
 cBlock = 'assets/RB.png'
-if (cNum == cNum2 - 3) {
+if (cNum == cNum5 - 3) {
+cBtop = '150px'
+cBleft = '275px'
+}
+if (cNum == cNum5 - 2) {
+cBtop = '125px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
+cBtop = '125px'
+cBleft = '275px'
+}
+if (cNum == cNum5 - 4) {
 cBtop = '100px'
-cBleft = '175px'
-}
-if (cNum == cNum2 - 2) {
-cBtop = '75px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
-cBtop = '75px'
-cBleft = '175px'
-}
-if (cNum == cNum2 - 4) {
-cBtop = '50px'
-cBleft = '200px'
+cBleft = '300px'
 }
 }
 
 if (cBlocNum == 5) {
 cNor = -25
 cMor = 50
-cBlock = 'assets/PB.png'
-if (cNum == cNum2 - 3) {
+cBlock = 'assets/BB.png'
+if (cNum == cNum5 - 3) {
+cBtop = '150px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 2) {
+cBtop = '125px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
 cBtop = '100px'
-cBleft = '200px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 2) {
-cBtop = '75px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
-cBtop = '50px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 4) {
-cBtop = '100px'
-cBleft = '175px'
+if (cNum == cNum5 - 4) {
+cBtop = '150px'
+cBleft = '275px'
 }
 }
 
 if (cBlocNum == 6) {
 cNor = -25
 cMor = 50
-cBlock = 'assets/GB.png'
-if (cNum == cNum2 - 3) {
+cBlock = 'assets/OB.png'
+if (cNum == cNum5 - 3) {
+cBtop = '150px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 2) {
+cBtop = '125px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
 cBtop = '100px'
-cBleft = '200px'
+cBleft = '300px'
 }
-if (cNum == cNum2 - 2) {
-cBtop = '75px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
-cBtop = '50px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 4) {
-cBtop = '100px'
-cBleft = '225px'
+if (cNum == cNum5 - 4) {
+cBtop = '150px'
+cBleft = '325px'
 }
 }
 
 if (cBlocNum == 7) {
 cNor = -25
 cMor = 50
-cBlock = 'assets/LLBB.png'
-if (cNum == cNum2 - 3) {
+cBlock = 'assets/GB.png'
+if (cNum == cNum5 - 3) {
+cBtop = '150px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 2) {
+cBtop = '125px'
+cBleft = '300px'
+}
+if (cNum == cNum5 - 1) {
+cBtop = '125px'
+cBleft = '275px'
+}
+if (cNum == cNum5 - 4) {
 cBtop = '100px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 2) {
-cBtop = '75px'
-cBleft = '200px'
-}
-if (cNum == cNum2 - 1) {
-cBtop = '75px'
-cBleft = '175px'
-}
-if (cNum == cNum2 - 4) {
-cBtop = '50px'
-cBleft = '175px'
+cBleft = '275px'
 }
 }
 }
-
+function cTurn(){
+if (cTS == 0) {
+cTS = cTS + 1
+}
+if (cBlocNum == 1) {
+if (cTS == 1){
+cSel02.style.top = parseInt(cSel02.style.top) - 75
+cSel03.style.top = parseInt(cSel03.style.top) - 50
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel02.style.left = parseInt(cSel02.style.left) - 25
+cSel03.style.left = parseInt(cSel03.style.left) - 50
+cSel04.style.left = parseInt(cSel04.style.left) - 75
+}
+if (cTS == 2){
+cSel02.style.top = parseInt(cSel02.style.top) + 75
+cSel03.style.top = parseInt(cSel03.style.top) + 50
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel03.style.left = parseInt(cSel03.style.left) + 50
+cSel04.style.left = parseInt(cSel04.style.left) + 75
+}
+if (cTS == 3){
+cSel02.style.top = parseInt(cSel02.style.top) - 75
+cSel03.style.top = parseInt(cSel03.style.top) - 50
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel02.style.left = parseInt(cSel02.style.left) - 25
+cSel03.style.left = parseInt(cSel03.style.left) - 50
+cSel04.style.left = parseInt(cSel04.style.left) - 75
+}
+if (cTS == 4){
+cSel02.style.top = parseInt(cSel02.style.top) + 75
+cSel03.style.top = parseInt(cSel03.style.top) + 50
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel03.style.left = parseInt(cSel03.style.left) + 50
+cSel04.style.left = parseInt(cSel04.style.left) + 75
+}
+}
+if (cBlocNum == 2) {
+if (cTS == 1){
+}
+if (cTS == 2){
+}
+if (cTS == 3){
+}
+if (cTS == 4){
+}
+}
+if (cBlocNum == 3) {
+if (cTS == 1){
+cSel01.style.left = parseInt(cSel01.style.left) - 25
+cSel01.style.top = parseInt(cSel01.style.top) - 25
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel02.style.top = parseInt(cSel02.style.top) - 25
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+}
+if (cTS == 2){
+cSel01.style.left = parseInt(cSel01.style.left) + 25
+cSel01.style.top = parseInt(cSel01.style.top) + 25
+}
+if (cTS == 3){
+cSel02.style.left = parseInt(cSel02.style.left) - 25
+cSel02.style.top = parseInt(cSel02.style.top) + 25
+}
+if (cTS == 4){
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+}
+}
+if (cBlocNum == 4) {
+if (cTS == 1){
+cSel02.style.left = parseInt(cSel02.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel01.style.left = parseInt(cSel01.style.left) + 50
+cSel01.style.top = parseInt(cSel01.style.top) - 25
+}
+if (cTS == 2){
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel01.style.left = parseInt(cSel01.style.left) - 50
+cSel01.style.top = parseInt(cSel01.style.top) + 25
+}
+if (cTS == 3){
+cSel02.style.left = parseInt(cSel02.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel01.style.left = parseInt(cSel01.style.left) + 50
+cSel01.style.top = parseInt(cSel01.style.top) - 25
+}
+if (cTS == 4){
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel01.style.left = parseInt(cSel01.style.left) - 50
+cSel01.style.top = parseInt(cSel01.style.top) + 25
+}
+}
+if (cBlocNum == 5) {
+if (cTS == 1){
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel03.style.top = parseInt(cSel03.style.top) - 25
+cSel04.style.left = parseInt(cSel04.style.left) - 50
+cSel02.style.left = parseInt(cSel02.style.left) - 75
+cSel02.style.top = parseInt(cSel02.style.top) + 25
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) - 50
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel03.style.top = parseInt(cSel03.style.top) - 25
+cSel02.style.top = parseInt(cSel02.style.top) - 75
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel02.style.top = parseInt(cSel02.style.top) + 25
+cSel02.style.left = parseInt(cSel02.style.left) + 50
+cSel04.style.left = parseInt(cSel04.style.left) + 75
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+}
+if (cTS == 2){
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel02.style.top = parseInt(cSel02.style.top) - 25
+cSel02.style.left = parseInt(cSel02.style.left) - 50
+cSel04.style.left = parseInt(cSel04.style.left) - 75
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+}
+if (cTS == 3){
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 50
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel03.style.top = parseInt(cSel03.style.top) + 25
+cSel02.style.top = parseInt(cSel02.style.top) + 75
+}
+if (cTS == 4){
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel03.style.top = parseInt(cSel03.style.top) + 25
+cSel04.style.left = parseInt(cSel04.style.left) + 50
+cSel02.style.left = parseInt(cSel02.style.left) + 75
+cSel02.style.top = parseInt(cSel02.style.top) - 25
+}
+}
+if (cBlocNum == 6) {
+if (cTS == 1){
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel03.style.top = parseInt(cSel03.style.top) - 25
+cSel01.style.left = parseInt(cSel01.style.left) - 25
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) - 50
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel02.style.left = parseInt(cSel02.style.left) - 50
+cSel04.style.left = parseInt(cSel04.style.left) - 75
+cSel02.style.top = parseInt(cSel02.style.top) + 25
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+}
+if (cTS == 2){
+cSel03.style.left = parseInt(cSel03.style.left) + 25
+cSel02.style.left = parseInt(cSel02.style.left) + 50
+cSel04.style.left = parseInt(cSel04.style.left) + 75
+cSel02.style.top = parseInt(cSel02.style.top) - 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+}
+if (cTS == 3){
+cSel01.style.left = parseInt(cSel01.style.left) + 25
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) + 50
+}
+if (cTS == 4){
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel03.style.left = parseInt(cSel03.style.left) - 25
+cSel03.style.top = parseInt(cSel03.style.top) + 25
+}
+}
+if (cBlocNum == 7) {
+if (cTS == 1){
+cSel02.style.left = parseInt(cSel02.style.left) - 25 
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel03.style.left = parseInt(cSel03.style.left) - 50
+cSel01.style.left = parseInt(cSel01.style.left) - 50
+cSel01.style.top = parseInt(cSel01.style.top) - 25
+}
+if (cTS == 2){
+cSel02.style.left = parseInt(cSel02.style.left) + 25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel03.style.left = parseInt(cSel03.style.left) + 50
+cSel01.style.left = parseInt(cSel01.style.left) + 50
+cSel01.style.top = parseInt(cSel01.style.top) + 25
+}
+if (cTS == 3){
+cSel02.style.left = parseInt(cSel02.style.left) - 25 
+cSel04.style.top = parseInt(cSel04.style.top) - 25
+cSel04.style.left = parseInt(cSel04.style.left) - 25
+cSel03.style.left = parseInt(cSel03.style.left) - 50
+cSel01.style.left = parseInt(cSel01.style.left) - 50
+cSel01.style.top = parseInt(cSel01.style.top) - 25
+}
+if (cTS == 4){
+cSel02.style.left = parseInt(cSel02.style.left) +25
+cSel04.style.top = parseInt(cSel04.style.top) + 25
+cSel04.style.left = parseInt(cSel04.style.left) + 25
+cSel03.style.left = parseInt(cSel03.style.left) + 50
+cSel01.style.left = parseInt(cSel01.style.left) + 50
+cSel01.style.top = parseInt(cSel01.style.top) + 25
+}
+}
+}
 function cPush() {
 let cNum5 = cNum - 3
 let cNum6 = cNum - 2
@@ -242,7 +542,8 @@ document.getElementById('cNBB' + cNum8),
 }
 
 function cImgI () {
-cNum2 = cNum2 + 4
+cTS = 1
+cNum5 = cNum5 + 4
 cBlocNum = Math.floor(Math.random() * 7) + 1;
  for (let cLoop = 0; cLoop < cMax2; cLoop++) {
  	    cBlox()
@@ -257,70 +558,23 @@ cPush()
  }
 
     function cKey() {
-        cObj2.forEach(cAHit)     
-let cKey = event.key
-let cWall = parseInt(document.getElementById('Wall').style.top)
-let cWall2 = parseInt(document.getElementById('Wall2').style.left) + 25
-let cWall3 = parseInt(document.getElementById('Wall3').style.left)
-let cNum1 = cNum - 3
-let cNum2 = cNum - 2
-let cNum3 = cNum - 1
-let cNum4 = cNum - 0
-if (document.getElementById('cRad01').checked == true) {
-cSel01 = document.getElementById('cBB01')
-cSel02 = document.getElementById('cBB02')
-cSel03 = document.getElementById('cBB03')
-cSel04 = document.getElementById('cBB04')
-}
-if (document.getElementById('cRad02').checked == true) {
-cSel01 = document.getElementById('cYB01')
-cSel02 = document.getElementById('cYB02')
-cSel03 = document.getElementById('cYB03')
-cSel04 = document.getElementById('cYB04')
-}
-if (document.getElementById('cRad03').checked == true) {
+cNum1 = cNum - 3
+cNum2 = cNum - 2
+cNum3 = cNum - 1
+cNum4 = cNum - 0 
 cSel01 = document.getElementById('cNBB' + cNum1)
 cSel02 = document.getElementById('cNBB' + cNum2)
 cSel03 = document.getElementById('cNBB' + cNum3)
 cSel04 = document.getElementById('cNBB' + cNum4)
-        }
-let cLow = 0
-let cMid = 0
-let cHig = 0
-const cSel = [parseInt(cSel01.style.top), parseInt(cSel02.style.top), parseInt(cSel03.style.top), parseInt(cSel04.style.top)] 
-const cSel2 = [parseInt(cSel01.style.left), parseInt(cSel02.style.left), parseInt(cSel03.style.left), parseInt(cSel04.style.left)]
-const cSel3 = [parseInt(cSel01.style.left), parseInt(cSel02.style.left), parseInt(cSel03.style.left), parseInt(cSel04.style.left)]
-for ( let cLoop = 0;   cLoop < cMax;  cLoop++){
-     cSel.sort(function(a, b){return b - a});
-     cLow = parseInt(cSel[0]) + 25
-  }
-for (let cLoop = 0; cLoop < cMax; cLoop++) {
-     cSel2.sort(function(a, b){return b - a});
-     cHig = parseInt(cSel2[0]) + cNor
-}
-for (let cLoop = 0; cLoop < cMax; cLoop++) {
-     cSel3.sort(function(a, b){return a - b});
-     cMid = parseInt(cSel3[0]) + cMor
-}
-  if (cLow == cWall && cKey == 's') {
-          cSel01.style.top =  parseInt(cSel01.style.top) - 25 
-          cSel02.style.top =  parseInt(cSel02.style.top) - 25 
-          cSel03.style.top =  parseInt(cSel03.style.top) - 25 
-          cSel04.style.top =  parseInt(cSel04.style.top) - 25 
-}
-if (cHig == cWall2 && cKey == 'a') {
-           cSel01.style.left =  parseInt(cSel01.style.left) + 25 
-	   cSel02.style.left =  parseInt(cSel02.style.left) + 25 
-	   cSel03.style.left =  parseInt(cSel03.style.left) + 25 
-	   cSel04.style.left =  parseInt(cSel04.style.left) + 25 
-}
-if (cMid == cWall3 && cKey == 'd') {
-          cSel01.style.left =  parseInt(cSel01.style.left) - 25 
-	  cSel02.style.left =  parseInt(cSel02.style.left) - 25 
-	  cSel03.style.left =  parseInt(cSel03.style.left) - 25 
-	  cSel04.style.left =  parseInt(cSel04.style.left) - 25 
-}
-
+let cScore = document.getElementById('cDiv01').innerHTML  
+let cKey = event.key
+let cWall = parseInt(document.getElementById('Wall').style.top)
+let cWall2 = parseInt(document.getElementById('Wall2').style.left) + 25
+let cWall3 = parseInt(document.getElementById('Wall3').style.left)
+cCanTurn()
+const cSel0 = [cSel01, cSel02, cSel03, cSel04] 
+cSel0.forEach(cBound)
+cObj2.forEach(cHitBlock)
    if (cKey == 'd')  {
            cSel01.style.left =  parseInt(cSel01.style.left) + 25 
 	   cSel02.style.left =  parseInt(cSel02.style.left) + 25 
@@ -334,37 +588,40 @@ if (cMid == cWall3 && cKey == 'd') {
 	  cSel04.style.left =  parseInt(cSel04.style.left) - 25 
    }
          if (cKey == 'w') {
-          cSel01.style.top =  parseInt(cSel01.style.top) - 25 
-          cSel02.style.top =  parseInt(cSel02.style.top) - 25 
-          cSel03.style.top =  parseInt(cSel03.style.top) - 25 
-          cSel04.style.top =  parseInt(cSel04.style.top) - 25 
-   }
+if (cCT == true) {
+cTS = cTS + 1
+cTurn()
+}   
+}
+if (cTS >= 4){
+cTS = cTS - 4
+}
            if (cKey == 's') {
           cSel01.style.top =  parseInt(cSel01.style.top) + 25 
           cSel02.style.top =  parseInt(cSel02.style.top) + 25 
           cSel03.style.top =  parseInt(cSel03.style.top) + 25 
           cSel04.style.top =  parseInt(cSel04.style.top) + 25 
+	document.getElementById('cDiv01').innerHTML = parseInt(document.getElementById('cDiv01').innerHTML) + 1
 }
  }
-
+function cFarp () {
+}
+function cStart() {
+cImgI()
+cKey()
+}
 </script>
 <body id="body" onkeydown="{
 cKey()
    }">
 <input type=button value="create img" onclick="{cImgI()}">
 <h3 align=center> test</h3>
-<input type=radio name="BB" id="cRad01">BB<br>
-<input type=radio name="BB" id="cRad02">YB<br>
-<input type=radio name="BB" id="cRad03">NBB<br>
-<input type=checkbox id="cChk">
-<img src="assets/BB.png" id="cBB01" style=" position:absolute; left:200; top:100; width:25; height:25;">
-<img src="assets/BB.png" id="cBB02" style=" position:absolute; left:200; top:75; width:25; height:25;">
-<img src="assets/BB.png" id="cBB03" style=" position:absolute; left:200; top:50; width:25; height:25;">
-<img src="assets/BB.png" id="cBB04" style=" position:absolute; left:200; top:25; width:25; height:25;">
-<img src="assets/YB.png" id="cYB01" style=" position:absolute; left:200; top:100; width:25; height:25;">
-<img src="assets/YB.png" id="cYB02" style=" position:absolute; left:200; top:75; width:25; height:25;">
-<img src="assets/YB.png" id="cYB03" style=" position:absolute; left:175; top:100; width:25; height:25;">
-<img src="assets/YB.png" id="cYB04" style=" position:absolute; left:175; top:75; width:25; height:25;">
+<input type=button id="cBtn01" value="Start" style="color:Blue; background-color:red; position:absolute; left:275; top:300;" onclick="{
+cStart()
+let cSTB = document.getElementById('cBtn01')
+cSTB.remove()
+}">
+<div id="cDiv01" style="position:absolute; left:475; top:250; color:darkred;">0</div>
 <img src="assets/OBB.png" id="Wall" style=" position:absolute; left:175; top: 700; width:250; height:25;">
 <img src="assets/OSB.png" id="Wall2" style=" position:absolute; left:150; top: 200; width:25; height:500;">
 <img src="assets/OSB.png" id="Wall3" style=" position:absolute; left:425; top: 200; width:25; height:500;">
